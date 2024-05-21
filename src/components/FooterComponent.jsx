@@ -21,6 +21,7 @@ function FooterComponent(){
     return(
         <>
         <footer className="bg-customGray">  
+  
         <section className="px-20 py-8">
             <h1 className="flex-1 font-bold text-xl">Inspiration for future getaways</h1>
         <div className="flex pt-4 button">
@@ -58,16 +59,16 @@ function FooterComponent(){
                     <div>
                         <div className="flex flex-row">
                         <ul  className="flex ">
-                            <li className="flex-col  ">
+                        <li className="flex-col  ">
                                 
                                 <div className="font-bold">Aberfeldy </div>
                                 <span className="text-zinc-500">Holiday rentals </span>
                             </li>
-                            <li className="flex-col px-20">
+                            <li className="flex-col px-28">
                                 <div className="font-bold">Amsterdam </div>
                                 <span className="text-zinc-500">Chalet rentals </span>
                                 </li>
-                            <li  className="flex-col px-20">
+                            <li  className="flex-col px-14">
                                 <div className="font-bold">Athens </div>
                                 <span className="text-zinc-500">Rentals with pools</span>
                             </li>
@@ -75,11 +76,11 @@ function FooterComponent(){
                                 <div className="font-bold">Aviemore</div>
                                 <span className="text-zinc-500">Cabin rentals</span>
                             </li>
-                            <li  className="flex-col px-20">
+                            <li  className="flex-col px-12">
                                 <div className="font-bold">Bakewell</div>
                                 <span className="text-zinc-500">Cottage rentals</span>
                             </li>
-                            <li  className="flex-col px-18">
+                            <li  className="flex-col px-20">
                                 <div className="font-bold">Barcelpna</div>
                                 <span className="text-zinc-500">Flat rentals</span>
                             </li>
@@ -87,16 +88,16 @@ function FooterComponent(){
                         </div>
                         <div className="flex flex-row pt-5">
                         <ul  className="flex ">
-                            <li className="flex-col  ">
+                        <li className="flex-col  ">
                                 
                                 <div className="font-bold">Aberfeldy </div>
                                 <span className="text-zinc-500">Holiday rentals </span>
                             </li>
-                            <li className="flex-col px-20">
+                            <li className="flex-col px-28">
                                 <div className="font-bold">Amsterdam </div>
                                 <span className="text-zinc-500">Chalet rentals </span>
                                 </li>
-                            <li  className="flex-col px-20">
+                            <li  className="flex-col px-14">
                                 <div className="font-bold">Athens </div>
                                 <span className="text-zinc-500">Rentals with pools</span>
                             </li>
@@ -104,28 +105,29 @@ function FooterComponent(){
                                 <div className="font-bold">Aviemore</div>
                                 <span className="text-zinc-500">Cabin rentals</span>
                             </li>
-                            <li  className="flex-col px-20">
+                            <li  className="flex-col px-12">
                                 <div className="font-bold">Bakewell</div>
                                 <span className="text-zinc-500">Cottage rentals</span>
                             </li>
-                            <li  className="flex-col px-18">
+                            <li  className="flex-col px-20">
                                 <div className="font-bold">Barcelpna</div>
                                 <span className="text-zinc-500">Flat rentals</span>
                             </li>
                         </ul>
                         </div>
                         <div className="flex flex-row pt-5">
+                          
                         <ul  className="flex ">
                             <li className="flex-col  ">
                                 
                                 <div className="font-bold">Aberfeldy </div>
                                 <span className="text-zinc-500">Holiday rentals </span>
                             </li>
-                            <li className="flex-col px-20">
+                            <li className="flex-col px-28">
                                 <div className="font-bold">Amsterdam </div>
                                 <span className="text-zinc-500">Chalet rentals </span>
                                 </li>
-                            <li  className="flex-col px-20">
+                            <li  className="flex-col px-14">
                                 <div className="font-bold">Athens </div>
                                 <span className="text-zinc-500">Rentals with pools</span>
                             </li>
@@ -133,100 +135,101 @@ function FooterComponent(){
                                 <div className="font-bold">Aviemore</div>
                                 <span className="text-zinc-500">Cabin rentals</span>
                             </li>
-                            <li  className="flex-col px-20">
+                            <li  className="flex-col px-12">
                                 <div className="font-bold">Bakewell</div>
                                 <span className="text-zinc-500">Cottage rentals</span>
                             </li>
                             {showMore === 'showMoreTab'&& 
-                            <li  className="flex-col px-18">
+                            <li  className="flex-col px-20">
                                 <div className="font-bold">Barcelpna</div>
                                 <span className="text-zinc-500">Flat rentals</span>
                             </li>}  
-                          <button  onClick={()=>handleShowMoreClick('showMoreTab')} className={`px-18 text-black ${showMore ? 'showMoreTab' : '!showMoreTab'}`} >
-                          {showMore === 'showMoreTab'? '' :  <div className="flex">
-                          <span className="pb-8">Show More</span>
+                            <li>
+                          <button  onClick={()=>handleShowMoreClick('showMoreTab')} className={` text-black ${showMore ? 'showMoreTab' : '!showMoreTab'}`} >
+                          {showMore === 'showMoreTab'? '' :  <div className="flex px-16 mx-3">
+                          <span className="pb-8 ">Show More</span>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="h-4 w-4 my-1.5 mx-0.5 " aria-hidden="true" role="presentation" focusable="false" stroke="currentColor">
                             <path strokeWidth="5" d="M8 12 L16 20 L24 12" fill="none" strokeLinecap="round" strokeLinejoin="round"></path>
                           </svg>
                             </div>}
                                 </button>
-        
+                                </li>
                         </ul>
                         </div>
                 
           {showMore === 'showMoreTab' && 
           <div><div className="flex flex-row pt-5">
           <ul  className="flex ">
-              <li className="flex-col  ">
-                  
-                  <div className="font-bold">Aberfeldy </div>
-                  <span className="text-zinc-500">Holiday rentals </span>
-              </li>
-              <li className="flex-col px-20">
-                  <div className="font-bold">Amsterdam </div>
-                  <span className="text-zinc-500">Chalet rentals </span>
-                  </li>
-              <li  className="flex-col px-20">
-                  <div className="font-bold">Athens </div>
-                  <span className="text-zinc-500">Rentals with pools</span>
-              </li>
-              <li  className="flex-col px-20">
-                  <div className="font-bold">Aviemore</div>
-                  <span className="text-zinc-500">Cabin rentals</span>
-              </li>
-              <li  className="flex-col px-20">
-                  <div className="font-bold">Bakewell</div>
-                  <span className="text-zinc-500">Cottage rentals</span>
-              </li>
-              <li  className="flex-col px-18">
-                  <div className="font-bold">Barcelpna</div>
-                  <span className="text-zinc-500">Flat rentals</span>
-              </li>
-          </ul>
+                        <li className="flex-col  ">
+                                
+                                <div className="font-bold">Aberfeldy </div>
+                                <span className="text-zinc-500">Holiday rentals </span>
+                            </li>
+                            <li className="flex-col px-28">
+                                <div className="font-bold">Amsterdam </div>
+                                <span className="text-zinc-500">Chalet rentals </span>
+                                </li>
+                            <li  className="flex-col px-14">
+                                <div className="font-bold">Athens </div>
+                                <span className="text-zinc-500">Rentals with pools</span>
+                            </li>
+                            <li  className="flex-col px-20">
+                                <div className="font-bold">Aviemore</div>
+                                <span className="text-zinc-500">Cabin rentals</span>
+                            </li>
+                            <li  className="flex-col px-12">
+                                <div className="font-bold">Bakewell</div>
+                                <span className="text-zinc-500">Cottage rentals</span>
+                            </li>
+                            <li  className="flex-col px-20">
+                                <div className="font-bold">Barcelpna</div>
+                                <span className="text-zinc-500">Flat rentals</span>
+                            </li>
+                        </ul>
           </div>
           <div className="flex flex-row pt-5">
           <ul  className="flex ">
-              <li className="flex-col  ">
-                  
-                  <div className="font-bold">Aberfeldy </div>
-                  <span className="text-zinc-500">Holiday rentals </span>
-              </li>
-              <li className="flex-col px-20">
-                  <div className="font-bold">Amsterdam </div>
-                  <span className="text-zinc-500">Chalet rentals </span>
-                  </li>
-              <li  className="flex-col px-20">
-                  <div className="font-bold">Athens </div>
-                  <span className="text-zinc-500">Rentals with pools</span>
-              </li>
-              <li  className="flex-col px-20">
-                  <div className="font-bold">Aviemore</div>
-                  <span className="text-zinc-500">Cabin rentals</span>
-              </li>
-              <li  className="flex-col px-20">
-                  <div className="font-bold">Bakewell</div>
-                  <span className="text-zinc-500">Cottage rentals</span>
-              </li>
-              <li  className="flex-col px-18">
-                  <div className="font-bold">Barcelpna</div>
-                  <span className="text-zinc-500">Flat rentals</span>
-              </li>
-          </ul>
+                        <li className="flex-col  ">
+                                
+                                <div className="font-bold">Aberfeldy </div>
+                                <span className="text-zinc-500">Holiday rentals </span>
+                            </li>
+                            <li className="flex-col px-28">
+                                <div className="font-bold">Amsterdam </div>
+                                <span className="text-zinc-500">Chalet rentals </span>
+                                </li>
+                            <li  className="flex-col px-14">
+                                <div className="font-bold">Athens </div>
+                                <span className="text-zinc-500">Rentals with pools</span>
+                            </li>
+                            <li  className="flex-col px-20">
+                                <div className="font-bold">Aviemore</div>
+                                <span className="text-zinc-500">Cabin rentals</span>
+                            </li>
+                            <li  className="flex-col px-12">
+                                <div className="font-bold">Bakewell</div>
+                                <span className="text-zinc-500">Cottage rentals</span>
+                            </li>
+                            <li  className="flex-col px-20">
+                                <div className="font-bold">Barcelpna</div>
+                                <span className="text-zinc-500">Flat rentals</span>
+                            </li>
+                        </ul>
           </div>
           
         {/* jfdkfg add button */}
                         <div className="flex flex-row pt-5">
                         <ul  className="flex ">
-                            <li className="flex-col  ">
+                        <li className="flex-col  ">
                                 
                                 <div className="font-bold">Aberfeldy </div>
                                 <span className="text-zinc-500">Holiday rentals </span>
                             </li>
-                            <li className="flex-col px-20">
+                            <li className="flex-col px-28">
                                 <div className="font-bold">Amsterdam </div>
                                 <span className="text-zinc-500">Chalet rentals </span>
                                 </li>
-                            <li  className="flex-col px-20">
+                            <li  className="flex-col px-14">
                                 <div className="font-bold">Athens </div>
                                 <span className="text-zinc-500">Rentals with pools</span>
                             </li>
@@ -234,11 +237,11 @@ function FooterComponent(){
                                 <div className="font-bold">Aviemore</div>
                                 <span className="text-zinc-500">Cabin rentals</span>
                             </li>
-                            <li  className="flex-col px-20">
+                            <li  className="flex-col px-12">
                                 <div className="font-bold">Bakewell</div>
                                 <span className="text-zinc-500">Cottage rentals</span>
                             </li>
-                            <li  className="flex-col px-18">
+                            <li  className="flex-col px-20">
                                 <div className="font-bold">Barcelpna</div>
                                 <span className="text-zinc-500">Flat rentals</span>
                             </li>
@@ -246,16 +249,16 @@ function FooterComponent(){
                         </div>
                         <div className="flex flex-row pt-5">
                         <ul  className="flex ">
-                            <li className="flex-col  ">
+                        <li className="flex-col  ">
                                 
                                 <div className="font-bold">Aberfeldy </div>
                                 <span className="text-zinc-500">Holiday rentals </span>
                             </li>
-                            <li className="flex-col px-20">
+                            <li className="flex-col px-28">
                                 <div className="font-bold">Amsterdam </div>
                                 <span className="text-zinc-500">Chalet rentals </span>
                                 </li>
-                            <li  className="flex-col px-20">
+                            <li  className="flex-col px-14">
                                 <div className="font-bold">Athens </div>
                                 <span className="text-zinc-500">Rentals with pools</span>
                             </li>
@@ -263,11 +266,11 @@ function FooterComponent(){
                                 <div className="font-bold">Aviemore</div>
                                 <span className="text-zinc-500">Cabin rentals</span>
                             </li>
-                            <li  className="flex-col px-20">
+                            <li  className="flex-col px-12">
                                 <div className="font-bold">Bakewell</div>
                                 <span className="text-zinc-500">Cottage rentals</span>
                             </li>
-                            <li  className="flex-col px-18">
+                            <li  className="flex-col px-20">
                                 <div className="font-bold">Barcelpna</div>
                                 <span className="text-zinc-500">Flat rentals</span>
                             </li>
@@ -275,16 +278,16 @@ function FooterComponent(){
                         </div>
                         <div className="flex flex-row pt-5">
                         <ul  className="flex ">
-                            <li className="flex-col  ">
+                        <li className="flex-col  ">
                                 
                                 <div className="font-bold">Aberfeldy </div>
                                 <span className="text-zinc-500">Holiday rentals </span>
                             </li>
-                            <li className="flex-col px-20">
+                            <li className="flex-col px-28">
                                 <div className="font-bold">Amsterdam </div>
                                 <span className="text-zinc-500">Chalet rentals </span>
                                 </li>
-                            <li  className="flex-col px-20">
+                            <li  className="flex-col px-14">
                                 <div className="font-bold">Athens </div>
                                 <span className="text-zinc-500">Rentals with pools</span>
                             </li>
@@ -292,11 +295,11 @@ function FooterComponent(){
                                 <div className="font-bold">Aviemore</div>
                                 <span className="text-zinc-500">Cabin rentals</span>
                             </li>
-                            <li  className="flex-col px-20">
+                            <li  className="flex-col px-12">
                                 <div className="font-bold">Bakewell</div>
                                 <span className="text-zinc-500">Cottage rentals</span>
                             </li>
-                            <li  className="flex-col px-18">
+                            <li  className="flex-col px-20">
                                 <div className="font-bold">Barcelpna</div>
                                 <span className="text-zinc-500">Flat rentals</span>
                             </li>
@@ -310,271 +313,18 @@ function FooterComponent(){
                     {/* Historic tab2 content*/}
                     {activeTab === 'Tab2' && 
                      <div>
-                        <div className="flex flex-row">
-                        <ul  className="flex ">
-                            <li className="flex-col  ">
-                                
-                                <div className="font-bold">Aberfeldy </div>
-                                <span className="text-zinc-500">Holiday rentals </span>
-                            </li>
-                            <li className="flex-col px-20">
-                                <div className="font-bold">Amsterdam </div>
-                                <span className="text-zinc-500">Chalet rentals </span>
-                                </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Athens </div>
-                                <span className="text-zinc-500">Rentals with pools</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Aviemore</div>
-                                <span className="text-zinc-500">Cabin rentals</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Bakewell</div>
-                                <span className="text-zinc-500">Cottage rentals</span>
-                            </li>
-                            <li  className="flex-col px-18">
-                                <div className="font-bold">Barcelpna</div>
-                                <span className="text-zinc-500">Flat rentals</span>
-                            </li>
-                        </ul>
-                        </div>
-                        <div className="flex flex-row pt-5">
-                        <ul  className="flex ">
-                            <li className="flex-col  ">
-                                
-                                <div className="font-bold">Aberfeldy </div>
-                                <span className="text-zinc-500">Holiday rentals </span>
-                            </li>
-                            <li className="flex-col px-20">
-                                <div className="font-bold">Amsterdam </div>
-                                <span className="text-zinc-500">Chalet rentals </span>
-                                </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Athens </div>
-                                <span className="text-zinc-500">Rentals with pools</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Aviemore</div>
-                                <span className="text-zinc-500">Cabin rentals</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Bakewell</div>
-                                <span className="text-zinc-500">Cottage rentals</span>
-                            </li>
-                            <li  className="flex-col px-18">
-                                <div className="font-bold">Barcelpna</div>
-                                <span className="text-zinc-500">Flat rentals</span>
-                            </li>
-                        </ul>
-                        </div>
-                        <div className="flex flex-row pt-5">
-                        <ul  className="flex ">
-                            <li className="flex-col  ">
-                                
-                                <div className="font-bold">Aberfeldy </div>
-                                <span className="text-zinc-500">Holiday rentals </span>
-                            </li>
-                            <li className="flex-col px-20">
-                                <div className="font-bold">Amsterdam </div>
-                                <span className="text-zinc-500">Chalet rentals </span>
-                                </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Athens </div>
-                                <span className="text-zinc-500">Rentals with pools</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Aviemore</div>
-                                <span className="text-zinc-500">Cabin rentals</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Bakewell</div>
-                                <span className="text-zinc-500">Cottage rentals</span>
-                            </li>
-                            {showMore === 'showMoreTab'&& 
-                            <li  className="flex-col px-18">
-                                <div className="font-bold">Barcelpna</div>
-                                <span className="text-zinc-500">Flat rentals</span>
-                            </li>}  
-                          <button  onClick={()=>handleShowMoreClick('showMoreTab')} className={`px-18 text-black ${showMore ? 'showMoreTab' : '!showMoreTab'}`} >
-                          {showMore === 'showMoreTab'? '' :  <div className="flex">
-                          <span className="pb-8">Show More</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="h-4 w-4 my-1.5 mx-0.5 " aria-hidden="true" role="presentation" focusable="false" stroke="currentColor">
-                            <path strokeWidth="5" d="M8 12 L16 20 L24 12" fill="none" strokeLinecap="round" strokeLinejoin="round"></path>
-                          </svg>
-                            </div>}
-                                </button>
-        
-                        </ul>
-                        </div>
-                
-          {showMore === 'showMoreTab' && 
-          <div><div className="flex flex-row pt-5">
-          <ul  className="flex ">
-              <li className="flex-col  ">
-                  
-                  <div className="font-bold">Aberfeldy </div>
-                  <span className="text-zinc-500">Holiday rentals </span>
-              </li>
-              <li className="flex-col px-20">
-                  <div className="font-bold">Amsterdam </div>
-                  <span className="text-zinc-500">Chalet rentals </span>
-                  </li>
-              <li  className="flex-col px-20">
-                  <div className="font-bold">Athens </div>
-                  <span className="text-zinc-500">Rentals with pools</span>
-              </li>
-              <li  className="flex-col px-20">
-                  <div className="font-bold">Aviemore</div>
-                  <span className="text-zinc-500">Cabin rentals</span>
-              </li>
-              <li  className="flex-col px-20">
-                  <div className="font-bold">Bakewell</div>
-                  <span className="text-zinc-500">Cottage rentals</span>
-              </li>
-              <li  className="flex-col px-18">
-                  <div className="font-bold">Barcelpna</div>
-                  <span className="text-zinc-500">Flat rentals</span>
-              </li>
-          </ul>
-          </div>
-          <div className="flex flex-row pt-5">
-          <ul  className="flex ">
-              <li className="flex-col  ">
-                  
-                  <div className="font-bold">Aberfeldy </div>
-                  <span className="text-zinc-500">Holiday rentals </span>
-              </li>
-              <li className="flex-col px-20">
-                  <div className="font-bold">Amsterdam </div>
-                  <span className="text-zinc-500">Chalet rentals </span>
-                  </li>
-              <li  className="flex-col px-20">
-                  <div className="font-bold">Athens </div>
-                  <span className="text-zinc-500">Rentals with pools</span>
-              </li>
-              <li  className="flex-col px-20">
-                  <div className="font-bold">Aviemore</div>
-                  <span className="text-zinc-500">Cabin rentals</span>
-              </li>
-              <li  className="flex-col px-20">
-                  <div className="font-bold">Bakewell</div>
-                  <span className="text-zinc-500">Cottage rentals</span>
-              </li>
-              <li  className="flex-col px-18">
-                  <div className="font-bold">Barcelpna</div>
-                  <span className="text-zinc-500">Flat rentals</span>
-              </li>
-          </ul>
-          </div>
-          
-        {/* jfdkfg add button */}
-                        <div className="flex flex-row pt-5">
-                        <ul  className="flex ">
-                            <li className="flex-col  ">
-                                
-                                <div className="font-bold">Aberfeldy </div>
-                                <span className="text-zinc-500">Holiday rentals </span>
-                            </li>
-                            <li className="flex-col px-20">
-                                <div className="font-bold">Amsterdam </div>
-                                <span className="text-zinc-500">Chalet rentals </span>
-                                </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Athens </div>
-                                <span className="text-zinc-500">Rentals with pools</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Aviemore</div>
-                                <span className="text-zinc-500">Cabin rentals</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Bakewell</div>
-                                <span className="text-zinc-500">Cottage rentals</span>
-                            </li>
-                            <li  className="flex-col px-18">
-                                <div className="font-bold">Barcelpna</div>
-                                <span className="text-zinc-500">Flat rentals</span>
-                            </li>
-                        </ul>
-                        </div>
-                        <div className="flex flex-row pt-5">
-                        <ul  className="flex ">
-                            <li className="flex-col  ">
-                                
-                                <div className="font-bold">Aberfeldy </div>
-                                <span className="text-zinc-500">Holiday rentals </span>
-                            </li>
-                            <li className="flex-col px-20">
-                                <div className="font-bold">Amsterdam </div>
-                                <span className="text-zinc-500">Chalet rentals </span>
-                                </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Athens </div>
-                                <span className="text-zinc-500">Rentals with pools</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Aviemore</div>
-                                <span className="text-zinc-500">Cabin rentals</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Bakewell</div>
-                                <span className="text-zinc-500">Cottage rentals</span>
-                            </li>
-                            <li  className="flex-col px-18">
-                                <div className="font-bold">Barcelpna</div>
-                                <span className="text-zinc-500">Flat rentals</span>
-                            </li>
-                        </ul>
-                        </div>
-                        <div className="flex flex-row pt-5">
-                        <ul  className="flex ">
-                            <li className="flex-col  ">
-                                
-                                <div className="font-bold">Aberfeldy </div>
-                                <span className="text-zinc-500">Holiday rentals </span>
-                            </li>
-                            <li className="flex-col px-20">
-                                <div className="font-bold">Amsterdam </div>
-                                <span className="text-zinc-500">Chalet rentals </span>
-                                </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Athens </div>
-                                <span className="text-zinc-500">Rentals with pools</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Aviemore</div>
-                                <span className="text-zinc-500">Cabin rentals</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Bakewell</div>
-                                <span className="text-zinc-500">Cottage rentals</span>
-                            </li>
-                            <li  className="flex-col px-18">
-                                <div className="font-bold">Barcelpna</div>
-                                <span className="text-zinc-500">Flat rentals</span>
-                            </li>
-                        </ul>
-                        </div>
-                        </div>
-                           }
-                        
-                        </div>}
-                     {/*Coastal tab3 content*/}
-                    {activeTab === 'Tab3' && 
-                     <div>
                      <div className="flex flex-row">
                      <ul  className="flex ">
-                         <li className="flex-col  ">
+                     <li className="flex-col  ">
                              
                              <div className="font-bold">Aberfeldy </div>
                              <span className="text-zinc-500">Holiday rentals </span>
                          </li>
-                         <li className="flex-col px-20">
+                         <li className="flex-col px-28">
                              <div className="font-bold">Amsterdam </div>
                              <span className="text-zinc-500">Chalet rentals </span>
                              </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-14">
                              <div className="font-bold">Athens </div>
                              <span className="text-zinc-500">Rentals with pools</span>
                          </li>
@@ -582,11 +332,11 @@ function FooterComponent(){
                              <div className="font-bold">Aviemore</div>
                              <span className="text-zinc-500">Cabin rentals</span>
                          </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-12">
                              <div className="font-bold">Bakewell</div>
                              <span className="text-zinc-500">Cottage rentals</span>
                          </li>
-                         <li  className="flex-col px-18">
+                         <li  className="flex-col px-20">
                              <div className="font-bold">Barcelpna</div>
                              <span className="text-zinc-500">Flat rentals</span>
                          </li>
@@ -594,16 +344,16 @@ function FooterComponent(){
                      </div>
                      <div className="flex flex-row pt-5">
                      <ul  className="flex ">
-                         <li className="flex-col  ">
+                     <li className="flex-col  ">
                              
                              <div className="font-bold">Aberfeldy </div>
                              <span className="text-zinc-500">Holiday rentals </span>
                          </li>
-                         <li className="flex-col px-20">
+                         <li className="flex-col px-28">
                              <div className="font-bold">Amsterdam </div>
                              <span className="text-zinc-500">Chalet rentals </span>
                              </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-14">
                              <div className="font-bold">Athens </div>
                              <span className="text-zinc-500">Rentals with pools</span>
                          </li>
@@ -611,28 +361,29 @@ function FooterComponent(){
                              <div className="font-bold">Aviemore</div>
                              <span className="text-zinc-500">Cabin rentals</span>
                          </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-12">
                              <div className="font-bold">Bakewell</div>
                              <span className="text-zinc-500">Cottage rentals</span>
                          </li>
-                         <li  className="flex-col px-18">
+                         <li  className="flex-col px-20">
                              <div className="font-bold">Barcelpna</div>
                              <span className="text-zinc-500">Flat rentals</span>
                          </li>
                      </ul>
                      </div>
                      <div className="flex flex-row pt-5">
+                       
                      <ul  className="flex ">
                          <li className="flex-col  ">
                              
                              <div className="font-bold">Aberfeldy </div>
                              <span className="text-zinc-500">Holiday rentals </span>
                          </li>
-                         <li className="flex-col px-20">
+                         <li className="flex-col px-28">
                              <div className="font-bold">Amsterdam </div>
                              <span className="text-zinc-500">Chalet rentals </span>
                              </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-14">
                              <div className="font-bold">Athens </div>
                              <span className="text-zinc-500">Rentals with pools</span>
                          </li>
@@ -640,100 +391,101 @@ function FooterComponent(){
                              <div className="font-bold">Aviemore</div>
                              <span className="text-zinc-500">Cabin rentals</span>
                          </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-12">
                              <div className="font-bold">Bakewell</div>
                              <span className="text-zinc-500">Cottage rentals</span>
                          </li>
                          {showMore === 'showMoreTab'&& 
-                         <li  className="flex-col px-18">
+                         <li  className="flex-col px-20">
                              <div className="font-bold">Barcelpna</div>
                              <span className="text-zinc-500">Flat rentals</span>
                          </li>}  
-                       <button  onClick={()=>handleShowMoreClick('showMoreTab')} className={`px-18 text-black ${showMore ? 'showMoreTab' : '!showMoreTab'}`} >
-                       {showMore === 'showMoreTab'? '' :  <div className="flex">
-                       <span className="pb-8">Show More</span>
+                         <li>
+                       <button  onClick={()=>handleShowMoreClick('showMoreTab')} className={` text-black ${showMore ? 'showMoreTab' : '!showMoreTab'}`} >
+                       {showMore === 'showMoreTab'? '' :  <div className="flex px-16 mx-3">
+                       <span className="pb-8 ">Show More</span>
                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="h-4 w-4 my-1.5 mx-0.5 " aria-hidden="true" role="presentation" focusable="false" stroke="currentColor">
                          <path strokeWidth="5" d="M8 12 L16 20 L24 12" fill="none" strokeLinecap="round" strokeLinejoin="round"></path>
                        </svg>
                          </div>}
                              </button>
-     
+                             </li>
                      </ul>
                      </div>
              
        {showMore === 'showMoreTab' && 
        <div><div className="flex flex-row pt-5">
        <ul  className="flex ">
-           <li className="flex-col  ">
-               
-               <div className="font-bold">Aberfeldy </div>
-               <span className="text-zinc-500">Holiday rentals </span>
-           </li>
-           <li className="flex-col px-20">
-               <div className="font-bold">Amsterdam </div>
-               <span className="text-zinc-500">Chalet rentals </span>
-               </li>
-           <li  className="flex-col px-20">
-               <div className="font-bold">Athens </div>
-               <span className="text-zinc-500">Rentals with pools</span>
-           </li>
-           <li  className="flex-col px-20">
-               <div className="font-bold">Aviemore</div>
-               <span className="text-zinc-500">Cabin rentals</span>
-           </li>
-           <li  className="flex-col px-20">
-               <div className="font-bold">Bakewell</div>
-               <span className="text-zinc-500">Cottage rentals</span>
-           </li>
-           <li  className="flex-col px-18">
-               <div className="font-bold">Barcelpna</div>
-               <span className="text-zinc-500">Flat rentals</span>
-           </li>
-       </ul>
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
        </div>
        <div className="flex flex-row pt-5">
        <ul  className="flex ">
-           <li className="flex-col  ">
-               
-               <div className="font-bold">Aberfeldy </div>
-               <span className="text-zinc-500">Holiday rentals </span>
-           </li>
-           <li className="flex-col px-20">
-               <div className="font-bold">Amsterdam </div>
-               <span className="text-zinc-500">Chalet rentals </span>
-               </li>
-           <li  className="flex-col px-20">
-               <div className="font-bold">Athens </div>
-               <span className="text-zinc-500">Rentals with pools</span>
-           </li>
-           <li  className="flex-col px-20">
-               <div className="font-bold">Aviemore</div>
-               <span className="text-zinc-500">Cabin rentals</span>
-           </li>
-           <li  className="flex-col px-20">
-               <div className="font-bold">Bakewell</div>
-               <span className="text-zinc-500">Cottage rentals</span>
-           </li>
-           <li  className="flex-col px-18">
-               <div className="font-bold">Barcelpna</div>
-               <span className="text-zinc-500">Flat rentals</span>
-           </li>
-       </ul>
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
        </div>
        
      {/* jfdkfg add button */}
                      <div className="flex flex-row pt-5">
                      <ul  className="flex ">
-                         <li className="flex-col  ">
+                     <li className="flex-col  ">
                              
                              <div className="font-bold">Aberfeldy </div>
                              <span className="text-zinc-500">Holiday rentals </span>
                          </li>
-                         <li className="flex-col px-20">
+                         <li className="flex-col px-28">
                              <div className="font-bold">Amsterdam </div>
                              <span className="text-zinc-500">Chalet rentals </span>
                              </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-14">
                              <div className="font-bold">Athens </div>
                              <span className="text-zinc-500">Rentals with pools</span>
                          </li>
@@ -741,11 +493,11 @@ function FooterComponent(){
                              <div className="font-bold">Aviemore</div>
                              <span className="text-zinc-500">Cabin rentals</span>
                          </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-12">
                              <div className="font-bold">Bakewell</div>
                              <span className="text-zinc-500">Cottage rentals</span>
                          </li>
-                         <li  className="flex-col px-18">
+                         <li  className="flex-col px-20">
                              <div className="font-bold">Barcelpna</div>
                              <span className="text-zinc-500">Flat rentals</span>
                          </li>
@@ -753,16 +505,16 @@ function FooterComponent(){
                      </div>
                      <div className="flex flex-row pt-5">
                      <ul  className="flex ">
-                         <li className="flex-col  ">
+                     <li className="flex-col  ">
                              
                              <div className="font-bold">Aberfeldy </div>
                              <span className="text-zinc-500">Holiday rentals </span>
                          </li>
-                         <li className="flex-col px-20">
+                         <li className="flex-col px-28">
                              <div className="font-bold">Amsterdam </div>
                              <span className="text-zinc-500">Chalet rentals </span>
                              </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-14">
                              <div className="font-bold">Athens </div>
                              <span className="text-zinc-500">Rentals with pools</span>
                          </li>
@@ -770,11 +522,11 @@ function FooterComponent(){
                              <div className="font-bold">Aviemore</div>
                              <span className="text-zinc-500">Cabin rentals</span>
                          </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-12">
                              <div className="font-bold">Bakewell</div>
                              <span className="text-zinc-500">Cottage rentals</span>
                          </li>
-                         <li  className="flex-col px-18">
+                         <li  className="flex-col px-20">
                              <div className="font-bold">Barcelpna</div>
                              <span className="text-zinc-500">Flat rentals</span>
                          </li>
@@ -782,16 +534,16 @@ function FooterComponent(){
                      </div>
                      <div className="flex flex-row pt-5">
                      <ul  className="flex ">
-                         <li className="flex-col  ">
+                     <li className="flex-col  ">
                              
                              <div className="font-bold">Aberfeldy </div>
                              <span className="text-zinc-500">Holiday rentals </span>
                          </li>
-                         <li className="flex-col px-20">
+                         <li className="flex-col px-28">
                              <div className="font-bold">Amsterdam </div>
                              <span className="text-zinc-500">Chalet rentals </span>
                              </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-14">
                              <div className="font-bold">Athens </div>
                              <span className="text-zinc-500">Rentals with pools</span>
                          </li>
@@ -799,11 +551,266 @@ function FooterComponent(){
                              <div className="font-bold">Aviemore</div>
                              <span className="text-zinc-500">Cabin rentals</span>
                          </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-12">
                              <div className="font-bold">Bakewell</div>
                              <span className="text-zinc-500">Cottage rentals</span>
                          </li>
-                         <li  className="flex-col px-18">
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
+                     </div>
+                     </div>
+                        }
+                     
+                     </div>}
+                     {/*Coastal tab3 content*/}
+                    {activeTab === 'Tab3' && 
+                     <div>
+                     <div className="flex flex-row">
+                     <ul  className="flex ">
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
+                     </div>
+                     <div className="flex flex-row pt-5">
+                     <ul  className="flex ">
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
+                     </div>
+                     <div className="flex flex-row pt-5">
+                       
+                     <ul  className="flex ">
+                         <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         {showMore === 'showMoreTab'&& 
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>}  
+                         <li>
+                       <button  onClick={()=>handleShowMoreClick('showMoreTab')} className={` text-black ${showMore ? 'showMoreTab' : '!showMoreTab'}`} >
+                       {showMore === 'showMoreTab'? '' :  <div className="flex px-16 mx-3">
+                       <span className="pb-8 ">Show More</span>
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="h-4 w-4 my-1.5 mx-0.5 " aria-hidden="true" role="presentation" focusable="false" stroke="currentColor">
+                         <path strokeWidth="5" d="M8 12 L16 20 L24 12" fill="none" strokeLinecap="round" strokeLinejoin="round"></path>
+                       </svg>
+                         </div>}
+                             </button>
+                             </li>
+                     </ul>
+                     </div>
+             
+       {showMore === 'showMoreTab' && 
+       <div><div className="flex flex-row pt-5">
+       <ul  className="flex ">
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
+       </div>
+       <div className="flex flex-row pt-5">
+       <ul  className="flex ">
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
+       </div>
+       
+     {/* jfdkfg add button */}
+                     <div className="flex flex-row pt-5">
+                     <ul  className="flex ">
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
+                     </div>
+                     <div className="flex flex-row pt-5">
+                     <ul  className="flex ">
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
+                     </div>
+                     <div className="flex flex-row pt-5">
+                     <ul  className="flex ">
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
                              <div className="font-bold">Barcelpna</div>
                              <span className="text-zinc-500">Flat rentals</span>
                          </li>
@@ -817,93 +824,93 @@ function FooterComponent(){
                     {activeTab === 'Tab4' && 
                     <div><div className="flex flex-row pt-5">
                     <ul  className="flex ">
-                        <li className="flex-col  ">
-                            
-                            <div className="font-bold">Aberfeldy </div>
-                            <span className="text-zinc-500">Holiday rentals </span>
-                        </li>
-                        <li className="flex-col px-20">
-                            <div className="font-bold">Amsterdam </div>
-                            <span className="text-zinc-500">Chalet rentals </span>
-                            </li>
-                        <li  className="flex-col px-20">
-                            <div className="font-bold">Athens </div>
-                            <span className="text-zinc-500">Rentals with pools</span>
-                        </li>
-                        <li  className="flex-col px-20">
-                            <div className="font-bold">Aviemore</div>
-                            <span className="text-zinc-500">Cabin rentals</span>
-                        </li>
-                        <li  className="flex-col px-20">
-                            <div className="font-bold">Bakewell</div>
-                            <span className="text-zinc-500">Cottage rentals</span>
-                        </li>
-                        <li  className="flex-col px-18">
-                            <div className="font-bold">Barcelpna</div>
-                            <span className="text-zinc-500">Flat rentals</span>
-                        </li>
-                    </ul>
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
                     </div>
                     </div>}
                     {/* Popular tab5 Lakes*/}
                     {activeTab === 'Tab5' && 
                     <div><div className="flex flex-row pt-5">
                     <ul  className="flex ">
-                        <li className="flex-col  ">
-                            
-                            <div className="font-bold">Aberfeldy </div>
-                            <span className="text-zinc-500">Holiday rentals </span>
-                        </li>
-                        <li className="flex-col px-20">
-                            <div className="font-bold">Amsterdam </div>
-                            <span className="text-zinc-500">Chalet rentals </span>
-                            </li>
-                        <li  className="flex-col px-20">
-                            <div className="font-bold">Athens </div>
-                            <span className="text-zinc-500">Rentals with pools</span>
-                        </li>
-                        <li  className="flex-col px-20">
-                            <div className="font-bold">Aviemore</div>
-                            <span className="text-zinc-500">Cabin rentals</span>
-                        </li>
-                        <li  className="flex-col px-20">
-                            <div className="font-bold">Bakewell</div>
-                            <span className="text-zinc-500">Cottage rentals</span>
-                        </li>
-                        <li  className="flex-col px-18">
-                            <div className="font-bold">Barcelpna</div>
-                            <span className="text-zinc-500">Flat rentals</span>
-                        </li>
-                    </ul>
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
                     </div>
                     <div className="flex flex-row pt-5">
-                        <ul  className="flex ">
-                            <li className="flex-col  ">
-                                
-                                <div className="font-bold">Aberfeldy </div>
-                                <span className="text-zinc-500">Holiday rentals </span>
-                            </li>
-                            <li className="flex-col px-20">
-                                <div className="font-bold">Amsterdam </div>
-                                <span className="text-zinc-500">Chalet rentals </span>
-                                </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Athens </div>
-                                <span className="text-zinc-500">Rentals with pools</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Aviemore</div>
-                                <span className="text-zinc-500">Cabin rentals</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Bakewell</div>
-                                <span className="text-zinc-500">Cottage rentals</span>
-                            </li>
-                            <li  className="flex-col px-18">
-                                <div className="font-bold">Barcelpna</div>
-                                <span className="text-zinc-500">Flat rentals</span>
-                            </li>
-                        </ul>
+                    <ul  className="flex ">
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
                         </div>
                         <div className="flex flex-row pt-5">
                         <ul  className="flex ">
@@ -920,16 +927,16 @@ function FooterComponent(){
                      <div>
                      <div className="flex flex-row">
                      <ul  className="flex ">
-                         <li className="flex-col  ">
+                     <li className="flex-col  ">
                              
                              <div className="font-bold">Aberfeldy </div>
                              <span className="text-zinc-500">Holiday rentals </span>
                          </li>
-                         <li className="flex-col px-20">
+                         <li className="flex-col px-28">
                              <div className="font-bold">Amsterdam </div>
                              <span className="text-zinc-500">Chalet rentals </span>
                              </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-14">
                              <div className="font-bold">Athens </div>
                              <span className="text-zinc-500">Rentals with pools</span>
                          </li>
@@ -937,11 +944,11 @@ function FooterComponent(){
                              <div className="font-bold">Aviemore</div>
                              <span className="text-zinc-500">Cabin rentals</span>
                          </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-12">
                              <div className="font-bold">Bakewell</div>
                              <span className="text-zinc-500">Cottage rentals</span>
                          </li>
-                         <li  className="flex-col px-18">
+                         <li  className="flex-col px-20">
                              <div className="font-bold">Barcelpna</div>
                              <span className="text-zinc-500">Flat rentals</span>
                          </li>
@@ -949,16 +956,16 @@ function FooterComponent(){
                      </div>
                      <div className="flex flex-row pt-5">
                      <ul  className="flex ">
-                         <li className="flex-col  ">
+                     <li className="flex-col  ">
                              
                              <div className="font-bold">Aberfeldy </div>
                              <span className="text-zinc-500">Holiday rentals </span>
                          </li>
-                         <li className="flex-col px-20">
+                         <li className="flex-col px-28">
                              <div className="font-bold">Amsterdam </div>
                              <span className="text-zinc-500">Chalet rentals </span>
                              </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-14">
                              <div className="font-bold">Athens </div>
                              <span className="text-zinc-500">Rentals with pools</span>
                          </li>
@@ -966,28 +973,29 @@ function FooterComponent(){
                              <div className="font-bold">Aviemore</div>
                              <span className="text-zinc-500">Cabin rentals</span>
                          </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-12">
                              <div className="font-bold">Bakewell</div>
                              <span className="text-zinc-500">Cottage rentals</span>
                          </li>
-                         <li  className="flex-col px-18">
+                         <li  className="flex-col px-20">
                              <div className="font-bold">Barcelpna</div>
                              <span className="text-zinc-500">Flat rentals</span>
                          </li>
                      </ul>
                      </div>
                      <div className="flex flex-row pt-5">
+                       
                      <ul  className="flex ">
                          <li className="flex-col  ">
                              
                              <div className="font-bold">Aberfeldy </div>
                              <span className="text-zinc-500">Holiday rentals </span>
                          </li>
-                         <li className="flex-col px-20">
+                         <li className="flex-col px-28">
                              <div className="font-bold">Amsterdam </div>
                              <span className="text-zinc-500">Chalet rentals </span>
                              </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-14">
                              <div className="font-bold">Athens </div>
                              <span className="text-zinc-500">Rentals with pools</span>
                          </li>
@@ -995,100 +1003,101 @@ function FooterComponent(){
                              <div className="font-bold">Aviemore</div>
                              <span className="text-zinc-500">Cabin rentals</span>
                          </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-12">
                              <div className="font-bold">Bakewell</div>
                              <span className="text-zinc-500">Cottage rentals</span>
                          </li>
                          {showMore === 'showMoreTab'&& 
-                         <li  className="flex-col px-18">
+                         <li  className="flex-col px-20">
                              <div className="font-bold">Barcelpna</div>
                              <span className="text-zinc-500">Flat rentals</span>
                          </li>}  
-                       <button  onClick={()=>handleShowMoreClick('showMoreTab')} className={`px-18 text-black ${showMore ? 'showMoreTab' : '!showMoreTab'}`} >
-                       {showMore === 'showMoreTab'? '' :  <div className="flex">
-                       <span className="pb-8">Show More</span>
+                         <li>
+                       <button  onClick={()=>handleShowMoreClick('showMoreTab')} className={` text-black ${showMore ? 'showMoreTab' : '!showMoreTab'}`} >
+                       {showMore === 'showMoreTab'? '' :  <div className="flex px-16 mx-3">
+                       <span className="pb-8 ">Show More</span>
                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="h-4 w-4 my-1.5 mx-0.5 " aria-hidden="true" role="presentation" focusable="false" stroke="currentColor">
                          <path strokeWidth="5" d="M8 12 L16 20 L24 12" fill="none" strokeLinecap="round" strokeLinejoin="round"></path>
                        </svg>
                          </div>}
                              </button>
-     
+                             </li>
                      </ul>
                      </div>
              
        {showMore === 'showMoreTab' && 
        <div><div className="flex flex-row pt-5">
        <ul  className="flex ">
-           <li className="flex-col  ">
-               
-               <div className="font-bold">Aberfeldy </div>
-               <span className="text-zinc-500">Holiday rentals </span>
-           </li>
-           <li className="flex-col px-20">
-               <div className="font-bold">Amsterdam </div>
-               <span className="text-zinc-500">Chalet rentals </span>
-               </li>
-           <li  className="flex-col px-20">
-               <div className="font-bold">Athens </div>
-               <span className="text-zinc-500">Rentals with pools</span>
-           </li>
-           <li  className="flex-col px-20">
-               <div className="font-bold">Aviemore</div>
-               <span className="text-zinc-500">Cabin rentals</span>
-           </li>
-           <li  className="flex-col px-20">
-               <div className="font-bold">Bakewell</div>
-               <span className="text-zinc-500">Cottage rentals</span>
-           </li>
-           <li  className="flex-col px-18">
-               <div className="font-bold">Barcelpna</div>
-               <span className="text-zinc-500">Flat rentals</span>
-           </li>
-       </ul>
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
        </div>
        <div className="flex flex-row pt-5">
        <ul  className="flex ">
-           <li className="flex-col  ">
-               
-               <div className="font-bold">Aberfeldy </div>
-               <span className="text-zinc-500">Holiday rentals </span>
-           </li>
-           <li className="flex-col px-20">
-               <div className="font-bold">Amsterdam </div>
-               <span className="text-zinc-500">Chalet rentals </span>
-               </li>
-           <li  className="flex-col px-20">
-               <div className="font-bold">Athens </div>
-               <span className="text-zinc-500">Rentals with pools</span>
-           </li>
-           <li  className="flex-col px-20">
-               <div className="font-bold">Aviemore</div>
-               <span className="text-zinc-500">Cabin rentals</span>
-           </li>
-           <li  className="flex-col px-20">
-               <div className="font-bold">Bakewell</div>
-               <span className="text-zinc-500">Cottage rentals</span>
-           </li>
-           <li  className="flex-col px-18">
-               <div className="font-bold">Barcelpna</div>
-               <span className="text-zinc-500">Flat rentals</span>
-           </li>
-       </ul>
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
        </div>
        
      {/* jfdkfg add button */}
                      <div className="flex flex-row pt-5">
                      <ul  className="flex ">
-                         <li className="flex-col  ">
+                     <li className="flex-col  ">
                              
                              <div className="font-bold">Aberfeldy </div>
                              <span className="text-zinc-500">Holiday rentals </span>
                          </li>
-                         <li className="flex-col px-20">
+                         <li className="flex-col px-28">
                              <div className="font-bold">Amsterdam </div>
                              <span className="text-zinc-500">Chalet rentals </span>
                              </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-14">
                              <div className="font-bold">Athens </div>
                              <span className="text-zinc-500">Rentals with pools</span>
                          </li>
@@ -1096,11 +1105,11 @@ function FooterComponent(){
                              <div className="font-bold">Aviemore</div>
                              <span className="text-zinc-500">Cabin rentals</span>
                          </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-12">
                              <div className="font-bold">Bakewell</div>
                              <span className="text-zinc-500">Cottage rentals</span>
                          </li>
-                         <li  className="flex-col px-18">
+                         <li  className="flex-col px-20">
                              <div className="font-bold">Barcelpna</div>
                              <span className="text-zinc-500">Flat rentals</span>
                          </li>
@@ -1108,16 +1117,16 @@ function FooterComponent(){
                      </div>
                      <div className="flex flex-row pt-5">
                      <ul  className="flex ">
-                         <li className="flex-col  ">
+                     <li className="flex-col  ">
                              
                              <div className="font-bold">Aberfeldy </div>
                              <span className="text-zinc-500">Holiday rentals </span>
                          </li>
-                         <li className="flex-col px-20">
+                         <li className="flex-col px-28">
                              <div className="font-bold">Amsterdam </div>
                              <span className="text-zinc-500">Chalet rentals </span>
                              </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-14">
                              <div className="font-bold">Athens </div>
                              <span className="text-zinc-500">Rentals with pools</span>
                          </li>
@@ -1125,11 +1134,11 @@ function FooterComponent(){
                              <div className="font-bold">Aviemore</div>
                              <span className="text-zinc-500">Cabin rentals</span>
                          </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-12">
                              <div className="font-bold">Bakewell</div>
                              <span className="text-zinc-500">Cottage rentals</span>
                          </li>
-                         <li  className="flex-col px-18">
+                         <li  className="flex-col px-20">
                              <div className="font-bold">Barcelpna</div>
                              <span className="text-zinc-500">Flat rentals</span>
                          </li>
@@ -1137,16 +1146,16 @@ function FooterComponent(){
                      </div>
                      <div className="flex flex-row pt-5">
                      <ul  className="flex ">
-                         <li className="flex-col  ">
+                     <li className="flex-col  ">
                              
                              <div className="font-bold">Aberfeldy </div>
                              <span className="text-zinc-500">Holiday rentals </span>
                          </li>
-                         <li className="flex-col px-20">
+                         <li className="flex-col px-28">
                              <div className="font-bold">Amsterdam </div>
                              <span className="text-zinc-500">Chalet rentals </span>
                              </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-14">
                              <div className="font-bold">Athens </div>
                              <span className="text-zinc-500">Rentals with pools</span>
                          </li>
@@ -1154,11 +1163,11 @@ function FooterComponent(){
                              <div className="font-bold">Aviemore</div>
                              <span className="text-zinc-500">Cabin rentals</span>
                          </li>
-                         <li  className="flex-col px-20">
+                         <li  className="flex-col px-12">
                              <div className="font-bold">Bakewell</div>
                              <span className="text-zinc-500">Cottage rentals</span>
                          </li>
-                         <li  className="flex-col px-18">
+                         <li  className="flex-col px-20">
                              <div className="font-bold">Barcelpna</div>
                              <span className="text-zinc-500">Flat rentals</span>
                          </li>
@@ -1245,261 +1254,272 @@ function FooterComponent(){
                     {/* Popular tab8 Things to do*/}      
                     {activeTab === 'Tab8' && 
                      <div>
-                        <div className="flex flex-row">
-                        <ul  className="flex ">
-                            <li className="flex-col  ">
-                                
-                                <div className="font-bold">Aberfeldy </div>
-                                <span className="text-zinc-500">Holiday rentals </span>
-                            </li>
-                            <li className="flex-col px-20">
-                                <div className="font-bold">Amsterdam </div>
-                                <span className="text-zinc-500">Chalet rentals </span>
-                                </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Athens </div>
-                                <span className="text-zinc-500">Rentals with pools</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Aviemore</div>
-                                <span className="text-zinc-500">Cabin rentals</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Bakewell</div>
-                                <span className="text-zinc-500">Cottage rentals</span>
-                            </li>
-                            <li  className="flex-col px-18">
-                                <div className="font-bold">Barcelpna</div>
-                                <span className="text-zinc-500">Flat rentals</span>
-                            </li>
-                        </ul>
-                        </div>
-                        <div className="flex flex-row pt-5">
-                        <ul  className="flex ">
-                            <li className="flex-col  ">
-                                
-                                <div className="font-bold">Aberfeldy </div>
-                                <span className="text-zinc-500">Holiday rentals </span>
-                            </li>
-                            <li className="flex-col px-20">
-                                <div className="font-bold">Amsterdam </div>
-                                <span className="text-zinc-500">Chalet rentals </span>
-                                </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Athens </div>
-                                <span className="text-zinc-500">Rentals with pools</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Aviemore</div>
-                                <span className="text-zinc-500">Cabin rentals</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Bakewell</div>
-                                <span className="text-zinc-500">Cottage rentals</span>
-                            </li>
-                            <li  className="flex-col px-18">
-                                <div className="font-bold">Barcelpna</div>
-                                <span className="text-zinc-500">Flat rentals</span>
-                            </li>
-                        </ul>
-                        </div>
-                        <div className="flex flex-row pt-5">
-                        <ul  className="flex ">
-                            <li className="flex-col  ">
-                                
-                                <div className="font-bold">Aberfeldy </div>
-                                <span className="text-zinc-500">Holiday rentals </span>
-                            </li>
-                            <li className="flex-col px-20">
-                                <div className="font-bold">Amsterdam </div>
-                                <span className="text-zinc-500">Chalet rentals </span>
-                                </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Athens </div>
-                                <span className="text-zinc-500">Rentals with pools</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Aviemore</div>
-                                <span className="text-zinc-500">Cabin rentals</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Bakewell</div>
-                                <span className="text-zinc-500">Cottage rentals</span>
-                            </li>
-                            {showMore === 'showMoreTab'&& 
-                            <li  className="flex-col px-18">
-                                <div className="font-bold">Barcelpna</div>
-                                <span className="text-zinc-500">Flat rentals</span>
-                            </li>}  
-                          <button  onClick={()=>handleShowMoreClick('showMoreTab')} className={`px-18 text-black ${showMore ? 'showMoreTab' : '!showMoreTab'}`} >
-                          {showMore === 'showMoreTab'? '' :  <div className="flex">
-                          <span className="pb-8">Show More</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="h-4 w-4 my-1.5 mx-0.5 " aria-hidden="true" role="presentation" focusable="false" stroke="currentColor">
-                            <path strokeWidth="5" d="M8 12 L16 20 L24 12" fill="none" strokeLinecap="round" strokeLinejoin="round"></path>
-                          </svg>
-                            </div>}
-                                </button>
-        
-                        </ul>
-                        </div>
-                
-          {showMore === 'showMoreTab' && 
-          <div><div className="flex flex-row pt-5">
-          <ul  className="flex ">
-              <li className="flex-col  ">
-                  
-                  <div className="font-bold">Aberfeldy </div>
-                  <span className="text-zinc-500">Holiday rentals </span>
-              </li>
-              <li className="flex-col px-20">
-                  <div className="font-bold">Amsterdam </div>
-                  <span className="text-zinc-500">Chalet rentals </span>
-                  </li>
-              <li  className="flex-col px-20">
-                  <div className="font-bold">Athens </div>
-                  <span className="text-zinc-500">Rentals with pools</span>
-              </li>
-              <li  className="flex-col px-20">
-                  <div className="font-bold">Aviemore</div>
-                  <span className="text-zinc-500">Cabin rentals</span>
-              </li>
-              <li  className="flex-col px-20">
-                  <div className="font-bold">Bakewell</div>
-                  <span className="text-zinc-500">Cottage rentals</span>
-              </li>
-              <li  className="flex-col px-18">
-                  <div className="font-bold">Barcelpna</div>
-                  <span className="text-zinc-500">Flat rentals</span>
-              </li>
-          </ul>
-          </div>
-          <div className="flex flex-row pt-5">
-          <ul  className="flex ">
-              <li className="flex-col  ">
-                  
-                  <div className="font-bold">Aberfeldy </div>
-                  <span className="text-zinc-500">Holiday rentals </span>
-              </li>
-              <li className="flex-col px-20">
-                  <div className="font-bold">Amsterdam </div>
-                  <span className="text-zinc-500">Chalet rentals </span>
-                  </li>
-              <li  className="flex-col px-20">
-                  <div className="font-bold">Athens </div>
-                  <span className="text-zinc-500">Rentals with pools</span>
-              </li>
-              <li  className="flex-col px-20">
-                  <div className="font-bold">Aviemore</div>
-                  <span className="text-zinc-500">Cabin rentals</span>
-              </li>
-              <li  className="flex-col px-20">
-                  <div className="font-bold">Bakewell</div>
-                  <span className="text-zinc-500">Cottage rentals</span>
-              </li>
-              <li  className="flex-col px-18">
-                  <div className="font-bold">Barcelpna</div>
-                  <span className="text-zinc-500">Flat rentals</span>
-              </li>
-          </ul>
-          </div>
-          
-        {/* jfdkfg add button */}
-                        <div className="flex flex-row pt-5">
-                        <ul  className="flex ">
-                            <li className="flex-col  ">
-                                
-                                <div className="font-bold">Aberfeldy </div>
-                                <span className="text-zinc-500">Holiday rentals </span>
-                            </li>
-                            <li className="flex-col px-20">
-                                <div className="font-bold">Amsterdam </div>
-                                <span className="text-zinc-500">Chalet rentals </span>
-                                </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Athens </div>
-                                <span className="text-zinc-500">Rentals with pools</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Aviemore</div>
-                                <span className="text-zinc-500">Cabin rentals</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Bakewell</div>
-                                <span className="text-zinc-500">Cottage rentals</span>
-                            </li>
-                            <li  className="flex-col px-18">
-                                <div className="font-bold">Barcelpna</div>
-                                <span className="text-zinc-500">Flat rentals</span>
-                            </li>
-                        </ul>
-                        </div>
-                        <div className="flex flex-row pt-5">
-                        <ul  className="flex ">
-                            <li className="flex-col  ">
-                                
-                                <div className="font-bold">Aberfeldy </div>
-                                <span className="text-zinc-500">Holiday rentals </span>
-                            </li>
-                            <li className="flex-col px-20">
-                                <div className="font-bold">Amsterdam </div>
-                                <span className="text-zinc-500">Chalet rentals </span>
-                                </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Athens </div>
-                                <span className="text-zinc-500">Rentals with pools</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Aviemore</div>
-                                <span className="text-zinc-500">Cabin rentals</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Bakewell</div>
-                                <span className="text-zinc-500">Cottage rentals</span>
-                            </li>
-                            <li  className="flex-col px-18">
-                                <div className="font-bold">Barcelpna</div>
-                                <span className="text-zinc-500">Flat rentals</span>
-                            </li>
-                        </ul>
-                        </div>
-                        <div className="flex flex-row pt-5">
-                        <ul  className="flex ">
-                            <li className="flex-col  ">
-                                
-                                <div className="font-bold">Aberfeldy </div>
-                                <span className="text-zinc-500">Holiday rentals </span>
-                            </li>
-                            <li className="flex-col px-20">
-                                <div className="font-bold">Amsterdam </div>
-                                <span className="text-zinc-500">Chalet rentals </span>
-                                </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Athens </div>
-                                <span className="text-zinc-500">Rentals with pools</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Aviemore</div>
-                                <span className="text-zinc-500">Cabin rentals</span>
-                            </li>
-                            <li  className="flex-col px-20">
-                                <div className="font-bold">Bakewell</div>
-                                <span className="text-zinc-500">Cottage rentals</span>
-                            </li>
-                            <li  className="flex-col px-18">
-                                <div className="font-bold">Barcelpna</div>
-                                <span className="text-zinc-500">Flat rentals</span>
-                            </li>
-                        </ul>
-                        </div>
-                        </div>
-                           }
-                        
-                        </div>}
+                     <div className="flex flex-row">
+                     <ul  className="flex ">
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
+                     </div>
+                     <div className="flex flex-row pt-5">
+                     <ul  className="flex ">
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
+                     </div>
+                     <div className="flex flex-row pt-5">
+                       
+                     <ul  className="flex ">
+                         <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         {showMore === 'showMoreTab'&& 
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>}  
+                         <li>
+                       <button  onClick={()=>handleShowMoreClick('showMoreTab')} className={` text-black ${showMore ? 'showMoreTab' : '!showMoreTab'}`} >
+                       {showMore === 'showMoreTab'? '' :  <div className="flex px-16 mx-3">
+                       <span className="pb-8 ">Show More</span>
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="h-4 w-4 my-1.5 mx-0.5 " aria-hidden="true" role="presentation" focusable="false" stroke="currentColor">
+                         <path strokeWidth="5" d="M8 12 L16 20 L24 12" fill="none" strokeLinecap="round" strokeLinejoin="round"></path>
+                       </svg>
+                         </div>}
+                             </button>
+                             </li>
+                     </ul>
+                     </div>
+             
+       {showMore === 'showMoreTab' && 
+       <div><div className="flex flex-row pt-5">
+       <ul  className="flex ">
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
+       </div>
+       <div className="flex flex-row pt-5">
+       <ul  className="flex ">
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
+       </div>
+       
+     {/* jfdkfg add button */}
+                     <div className="flex flex-row pt-5">
+                     <ul  className="flex ">
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
+                     </div>
+                     <div className="flex flex-row pt-5">
+                     <ul  className="flex ">
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
+                     </div>
+                     <div className="flex flex-row pt-5">
+                     <ul  className="flex ">
+                     <li className="flex-col  ">
+                             
+                             <div className="font-bold">Aberfeldy </div>
+                             <span className="text-zinc-500">Holiday rentals </span>
+                         </li>
+                         <li className="flex-col px-28">
+                             <div className="font-bold">Amsterdam </div>
+                             <span className="text-zinc-500">Chalet rentals </span>
+                             </li>
+                         <li  className="flex-col px-14">
+                             <div className="font-bold">Athens </div>
+                             <span className="text-zinc-500">Rentals with pools</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Aviemore</div>
+                             <span className="text-zinc-500">Cabin rentals</span>
+                         </li>
+                         <li  className="flex-col px-12">
+                             <div className="font-bold">Bakewell</div>
+                             <span className="text-zinc-500">Cottage rentals</span>
+                         </li>
+                         <li  className="flex-col px-20">
+                             <div className="font-bold">Barcelpna</div>
+                             <span className="text-zinc-500">Flat rentals</span>
+                         </li>
+                     </ul>
+                     </div>
+                     </div>
+                        }
+                     
+                     </div>}
             </div>
         </section>
         <hr/>
-        <section className="flex flex-row px-20 py-8">
-            <article className="basis-1/3 space-y-4">
+        {/* <div class="container mx-auto p-4">
+  <div class="flex flex-col md:flex-row md:space-x-4">
+    <div class="w-full md:w-1/3 bg-blue-200 p-4 mb-4 md:mb-0">Div 1</div>
+    <div class="w-full md:w-1/3 bg-blue-300 p-4 mb-4 md:mb-0">Div 2</div>
+    <div class="w-full md:w-1/3 bg-blue-400 p-4">Div 3</div>
+  </div>
+</div> */}
+
+
+        <section className="flex flex-row px-20 py-8 ">
+            <article className="basis-1/3  space-y-4">
                 <div className="flex-col font-bold">Support</div>
                 <ul className="space-y-4 ">
                     <li><a href="">Help Centre</a></li>
@@ -1521,7 +1541,7 @@ function FooterComponent(){
                     <li>Join a free Hosting class</li>
                 </ul>
                 </article>
-            <article className="basis-1/3 px-3 space-y-4 ">
+            <article className="basis-1/3 px-12 space-y-4 ">
                 <div className="flex-col font-bold">Airbnb</div>
                 <ul className="space-y-4 ">
                     <li>Newsroom</li>
@@ -1534,6 +1554,7 @@ function FooterComponent(){
                 
                 </article>
         </section>
+   
         <div className="pt-3 px-20"><hr/></div>
         <section className="flex flex-row px-20 py-4">
         <hr className="pt-2"/>
