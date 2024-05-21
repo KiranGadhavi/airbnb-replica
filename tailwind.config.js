@@ -9,7 +9,10 @@ export default {
     extend: {
       screens: {
         'custom-xs': '50px',
-      }
+      },
+      colors: {
+        customGray: '#f7f7f7',
+      },
     },
   },
   plugins: [],
