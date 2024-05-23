@@ -1,7 +1,6 @@
 function MainComponent(){
     return(
         <>
-        {/* <div>MainComponent</div> */}
         </>
     )
 }
