@@ -3,7 +3,8 @@ import imgUrl from "../assets/Airbnb-Logo.wine.svg";
 function HeaderComponent(){
   
 return(
-<>
+<div className=' '>
+    <div className=''>
 <div className="hidden sm:hidden md:block lg:block xl:block ">
 <div className="flex pt-4 flex-wrap">
 
@@ -84,6 +85,7 @@ return(
     
 
   </div>
+  {/* sm & sm Header design */}
   <div  className="flex flex-row hidden px-2 custom-xs:block sm:block md:hidden lg:hidden xl:hidden">
   <div className="px-3 flex  ">
            <div className="flex shadow-md border rounded-full basis-11/12">
@@ -118,8 +120,8 @@ return(
 
         <hr/>
         <br/>
-
-</>
+        </div>
+</div>
 )
 }
 export default HeaderComponent

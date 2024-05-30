@@ -1,8 +1,8 @@
-function NavComponent(){
-    return(
-        <>
-        {/* <div>NavComponent</div> */}
-        </>
-    )
+
+function NavComponent (){
+
+  return (
+    <></>
+  );
 }
 export default NavComponent
