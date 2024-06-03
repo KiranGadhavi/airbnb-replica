@@ -9,10 +9,10 @@ function App() {
 
   return (
     <>  
-    <HeaderComponent></HeaderComponent>
-    <NavComponent></NavComponent>
-    <MainComponent></MainComponent>
-    <FooterComponent></FooterComponent>
+    <HeaderComponent className="fixed"></HeaderComponent>
+    <NavComponent className="relative"></NavComponent>
+    <MainComponent className="relative"></MainComponent>
+    <FooterComponent className="relative"></FooterComponent>
       <div>
   <h1 className="text-3xl font-bold underline">
     {/* Hello world! */}

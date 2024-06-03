@@ -86,7 +86,7 @@ function NavComponent (){
   };
 
   return (
-    <>
+    <div className='relative'>
     <div className="slider-container h-32 ">
        <div className='container grid grid-flow-row auto-rows-max'>
         <div className="px-20 grid grid-cols-4  xl:grid-cols-12 lg:grid-cols-12  ">
@@ -194,7 +194,7 @@ function NavComponent (){
        
         
       </div>
-    </>
+    </div>
   );
 }
 export default NavComponent

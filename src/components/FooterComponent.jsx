@@ -17,7 +17,7 @@ function FooterComponent(){
       };
     return(
         <>
-        <footer className="bg-customGray pt-6">  
+        <footer className="bg-customGray pt-6 ">  
   <section className="xl:px-20 custom-xs:px-6 py-8">
             <h1 className=" font-bold text-xl">Inspiration for future getaways</h1>
         <div className="flex pt-4 button">
