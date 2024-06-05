@@ -147,29 +147,29 @@ function MainComponent(){
       
     return(
         <>
-        <div className='xl:px-16 xl:mx-4 lg:px-16 md:px-6 sm:px-6 custom-xs:px-6 grid grid-cols-4 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 custom-xs:grid-cols-1'>
-        <ImageCard
+        <div className='xl:px-16 lg:px-8 md:px-4 sm:px-3 custom-xs:px-2 grid grid-cols-4 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 custom-xs:grid-cols-1'>
+        {/* lg:px-16 md:px-6 sm:px-6 custom-xs:px-6 */}
+        {/* <div className='px-4 w-[23rem]'> */}
+          <ImageCard
           images={slider1Images}
           title="Wake up in the Musée d’Orsay"
           host="Hosted by Mathieu Lehanneur"
           status="Sold"
         />
+        {/* </div> */}
         <ImageCard
-        className="col-span-1"
           images={slider2Images}
           title="Another Experience"
           host="Hosted by Someone Else"
           status="Available"
         />
          <ImageCard
-         className="col-span-1"
           images={slider3Images}
           title="Another Experience"
           host="Hosted by Someone Else"
           status="Available"
         />
          <ImageCard
-         className="col-span-1"
           images={slider4Images}
           title="Another Experience"
           host="Hosted by Someone Else"
@@ -225,12 +225,12 @@ function MainComponent(){
         />
       </div>
          {/* // past experiences */}
-         <div className='text-3xl font-bold px-20 pb-7 pt-'>
+         <div className='text-3xl font-bold xl:px-20 xl:px-20 lg:px-12 md:px-8 sm:px-6 custom-xs:px-6 pb-7 pt-'>
          <span >Past experiences</span>
 
          </div>
 
-      <div className='xl:px-16 xl:mx-4 lg:px-16 md:px-6 sm:px-6 custom-xs:px-6 grid grid-cols-4 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 custom-xs:grid-cols-1'>
+      <div className='xl:px-16 lg:px-8 md:px-4 sm:px-3 custom-xs:px-2 grid grid-cols-4 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 custom-xs:grid-cols-1'>
         <ImageCard
           images={slider13Images}
           title="Wake up in the Musée d’Orsay"
@@ -273,6 +273,7 @@ function MainComponent(){
           host="Hosted by Mathieu Lehanneur"
           status="Sold"
         />
+      {/* </div> */}
       </div>
       </>
     )
