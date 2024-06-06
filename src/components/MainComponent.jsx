@@ -225,7 +225,7 @@ function MainComponent(){
         />
       </div>
          {/* // past experiences */}
-         <div className='text-3xl font-bold xl:px-20 xl:px-20 lg:px-12 md:px-8 sm:px-6 custom-xs:px-6 pb-7 pt-'>
+         <div className='text-3xl font-semibold xl:px-20 xl:px-20 lg:px-12 md:px-8 sm:px-6 custom-xs:px-6 pb-7 pt-'>
          <span >Past experiences</span>
 
          </div>
