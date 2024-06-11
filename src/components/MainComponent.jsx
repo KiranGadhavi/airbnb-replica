@@ -147,7 +147,7 @@ function MainComponent(){
       
     return(
         <>
-        <div className='xl:px-16 lg:px-8 md:px-4 sm:px-3 custom-xs:px-2 grid grid-cols-4 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 custom-xs:grid-cols-1'>
+        <div className='xl:mt-72 md:mt-80 sm:mt-48 custom-xs:mt-44 xl:px-16 lg:px-8 md:px-4 sm:px-3 custom-xs:px-2 grid grid-cols-4 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 custom-xs:grid-cols-1'>
         {/* lg:px-16 md:px-6 sm:px-6 custom-xs:px-6 */}
         {/* <div className='px-4 w-[23rem]'> */}
           <ImageCard

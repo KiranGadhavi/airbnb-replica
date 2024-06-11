@@ -17,8 +17,8 @@ function FooterComponent(){
       };
     return(
         <>
-        <footer className="bg-customGray pt-6 ">  
-  <section className="xl:px-20 custom-xs:px-6 py-8">
+        <footer className="relative bg-customGray pt-6   md:px-2 lg:px-6 sm:px-1 ">  
+  <section className=" xl:px-14  custom-xs:px-6 py-8">
             <h1 className=" font-bold text-xl">Inspiration for future getaways</h1>
         <div className="flex pt-4 button">
            <div className="">
@@ -1386,7 +1386,7 @@ function FooterComponent(){
         <hr/>
 
                  {/* The footerRow2 has been divided into three articles */}
-        <section className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-1 xl:px-20 custom-xs:px-6">
+        <section className="xl:px-14  grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-1  custom-xs:px-6">
               {/* footerRow2 artice-1 */}
             <article className="flex flex-row  pt-4 pb-3 space-y-4 ">
                 
@@ -1416,7 +1416,7 @@ function FooterComponent(){
                 </article>
                <div className="hidden custom-xs:block sm:block md:block lg:hidden xl:hidden"> <hr/></div>
               {/* footerRow2 artice-3 */}
-            <article className="lg:15 flex pt-4 pb-4 space-y-3  ">
+            <article className=" flex pt-4 pb-4 space-y-3  ">
                 <ul className="flex-col space-y-3">
                 <span className="font-bold">Airbnb</span>
                     <li>Newsroom</li>
@@ -1429,10 +1429,10 @@ function FooterComponent(){
                 
                 </article>
         </section>
-        <div className="pt-3 px-6"><hr/></div>
+        <div className="pt-3 px-16"><hr/></div>
 
                  {/* The footerRow3 has been divided into three articles */}
-        <section className="grid xl:grid-cols-6 md:grid-cols-1 p-6 ">
+        <section className="grid xl:grid-cols-6 md:grid-cols-1 p-6 xl:px-0">
        {/* footerRow3 artice-1 */}
         <article className="xl:order-1 md:order-2 custom-xs:order-2 xl:px-14  md:mx-auto xl:col-span-1  grid xl:auto-cols-max lg:auto-cols-max ">
         <div>
@@ -1447,8 +1447,8 @@ function FooterComponent(){
         <article className="xl:order-2 md:order-3 custom-xs:order-3 md:mx-auto xl:col-span-2  grid auto-cols-max   ">
                 <div>
                 <ol className="flex flex-row xl:space-x-1 custom-xs:space-x-2 ">
-                    <span className=" custom-xs:space-x-1 "></span>
-                    <span> . </span>
+                    <span className=" custom-xs:space-x-1  "></span>
+                    <span > . </span>
                     <li>Privacy </li>
                     <span> . </span>
                     <li>Terms </li>
@@ -1465,13 +1465,13 @@ function FooterComponent(){
         {/* footerRow3 artice-3 */}
         <article className="xl:order-3 md:order-1 custom-xs:order-1 md:mx-auto xl:col-span-3   ">
             <div >
-                <div className="flex flex-row custom-xs:font-bold">
-                    <div className="xl:px-24 xl:mx-3"></div>
+                <div className="flex flex-row custom-xs:font-bold ">
+                    <div className="xl:px-40 xl:mx-4"></div>
              <button className="lg:px-1">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mt-1" viewBox="0 0 16 16" >
                 <path d="M8 .25a7.77 7.77 0 0 1 7.75 7.78 7.75 7.75 0 0 1-7.52 7.72h-.25A7.75 7.75 0 0 1 .25 8.24v-.25A7.75 7.75 0 0 1 8 .25zm1.95 8.5h-3.9c.15 2.9 1.17 5.34 1.88 5.5H8c.68 0 1.72-2.37 1.93-5.23zm4.26 0h-2.76c-.09 1.96-.53 3.78-1.18 5.08A6.26 6.26 0 0 0 14.17 9zm-9.67 0H1.8a6.26 6.26 0 0 0 3.94 5.08 12.59 12.59 0 0 1-1.16-4.7l-.03-.38zm1.2-6.58-.12.05a6.26 6.26 0 0 0-3.83 5.03h2.75c.09-1.83.48-3.54 1.06-4.81zm2.25-.42c-.7 0-1.78 2.51-1.94 5.5h3.9c-.15-2.9-1.18-5.34-1.89-5.5h-.07zm2.28.43.03.05a12.95 12.95 0 0 1 1.15 5.02h2.75a6.28 6.28 0 0 0-3.93-5.07z"></path></svg>
             </button>
-            <button className="px-2 lg:px-1">English (GB)</button>
+            <button className="px-2 lg:px-1">English (GB) </button>
             <button className="xl:px-6">
             <span>£</span>
             <span>GBP</span>

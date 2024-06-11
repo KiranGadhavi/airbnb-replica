@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 function NavComponent (){
   const [currentIndex, setCurrentIndex] = useState(0);
-  let itemsPerPage = 11;
+  let itemsPerPage = 13;
   let itemsPerPageMd = 7;
   let itemsPerPageSm = 4;
 
   const items = [
     { img: 'https://a0.muscache.com/im/pictures/mediaverse/category_icon/original/3e5243c8-4d15-4c6b-97e3-7ba2bb7bb880.png', text: 'Icons' },
-    { img: 'https://a0.muscache.com/pictures/f0c5ca0f-5aa0-4fe5-b38d-654264bacddf.jpg', text: 'Play' },
+    { img: 'https://a0.muscache.com/pictures/f0c5ca0f-5aa0-4fe5-b38d-654264bacddf.jpg', text: 'Play'},
     { img: 'https://a0.muscache.com/pictures/4221e293-4770-4ea8-a4fa-9972158d4004.jpg', text: 'Caves' },
     { img: 'https://a0.muscache.com/pictures/8e507f16-4943-4be9-b707-59bd38d56309.jpg', text: 'Islands' },
     { img: 'https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg', text: 'Lakefront' },
@@ -79,57 +79,57 @@ function NavComponent (){
   };
 
   const handleNextBtn = () => {
-   setCurrentIndex((prevIndex) => Math.min(prevIndex + itemsPerPage, items.length- itemsPerPage ));
+   setCurrentIndex((prevIndex) => Math.min(prevIndex + itemsPerPage, items.length - itemsPerPage ));
    setCurrentIndex((prevIndex) => Math.min(prevIndex + itemsPerPageMd, items.length- itemsPerPageMd ));
    setCurrentIndex((prevIndex) => Math.min(prevIndex + itemsPerPageSm, items.length- itemsPerPageSm ));
   
   };
 
   return (
-    <div className='relative'>
-    <div className="slider-container h-32 ">
-       <div className='container grid grid-flow-row auto-rows-max'>
-        <div className="px-20 grid grid-cols-4  xl:grid-cols-12 lg:grid-cols-12  ">
-        <div className='flex flex-row '>
-        <div className='basis-1/12 pt-2 hidden xl:block lg:block md:hidden sm:hidden'>
-      <button className="" onClick={handlePrevBtn} disabled={currentIndex === 0}>
+    <div className='fixed top-48 xl:top-48 md:top-52 sm:top-24 custom-xs:top-24 left-0 right-0 z-50 bg-white  overflow-x-auto'>
+    <div className="xl:px-20 lg:px-18 md:px-8 slider-container h-18 sm:h-24 custom-xs:h-20 md:pt-5 ">
+        <div className="grid grid-cols-12 xl:grid-cols-12 lg:grid-cols-12 xl:gap-4 lg:px-5   ">
+        <div className='text-sm xl:col-span-11 lg:col-span-11 xl:gap-8 lg:gap-3  flex'>
+        <div className=' pt-2 hidden xl:block lg:block md:hidden sm:hidden'>
+      {currentIndex > 1 && <button className="drop-shadow-2xl" onClick={handlePrevBtn} disabled={currentIndex === 0}>
        <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
           <path d="M65 15 L20 50 L65 85" stroke="black" strokeWidth="16" fill="none"/>
        </svg>
-      </button>
+      </button>}
         </div>
-        <div className='flex basis-10/12'>
           {items.slice(currentIndex, currentIndex + itemsPerPage).map((item, index) => (
-            <div className="slider-item px-7 " key={index}>
-              <div className='hidden xl:block lg:block md:hidden sm:hidden '> <img src={item.img} alt={`Item ${index + 1}`}  className='h-7 w-7 '/>
-              <span className='grid-flow-col xl:col-span-1 lg:col-span-1'>{item.text}</span></div>
-              
+            <div className="slider-item  opacity-65 hover:opacity-100 hover:border-b-2 active:border-b-2 hover:pb-2" key={index}>
+              <div className='hidden xl:block lg:block md:hidden sm:hidden'> 
+              <span className="flex items-center justify-center  ">
+                <img src={item.img} alt={`Item ${index + 1}`}  className='h-7 w-7'/></span>
+              <span >{item.text}</span></div>
             </div>
           ))}
-          </div>
-          <div className=' basis-1/6 hidden xl:block lg:block md:hidden sm:hidden'>
-            <div className='flex'>
-          <div className="flex  pr-6">
-      <button  onClick={handleNextBtn} disabled={currentIndex >= items.length - itemsPerPage}>
+          <span className="hidden xl:block lg:block md:hidden sm:hidden">
+      {currentIndex < items.length-itemsPerPage && <button  onClick={handleNextBtn} >
         <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
           <path  d="M20 15 L65 50 L20 85" stroke="black" strokeWidth="16" fill="none"/>
         </svg>
-      </button>
-        </div>
-       <div className="flex border border-slate-400 py-3 px-3 rounded-xl ">
-         <svg xmlns="http://www.w3.org/2000/svg"  className="h-4 w-4 x " fill="none" viewBox="0 0 32 32" stroke="currentColor" >
+      </button>}
+        </span>
+          </div>
+          <div className='xl:col-span-1 lg:col-span-1 hidden xl:block lg:block md:hidden sm:hidden'>
+            <div className='flex'>
+       <span className=" flex border border-slate-400 p-3 rounded-xl">
+        <span className='pt-1 pl-1'>
+         <svg xmlns="http://www.w3.org/2000/svg"  className="h-4 w-4  " fill="none" viewBox="0 0 32 32" stroke="currentColor" >
             <path  strokeWidth="3" d="M7 16H3m26 0H15M29 6h-4m-8 0H3m26 20h-4M7 16a4 4 0 1 0 8 0 4 4 0 0 0-8 0zM17 6a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 20a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 0H3"></path></svg>
-            <span className="pb-2.4 px-2">Filters</span>
+            </span>
+            <span className="place-self-center xl:px-1.5">Filters</span>
+        </span>
         </div>
-        </div>
-     </div>
      </div>
         </div>
 
         {/* md */}
-        <div className="px-24 grid grid-cols-4 md:grid-cols-7  pt-1">
-        <div className='flex flex-row'>
-        <div className='basis-10/12 pt-2 hidden xl:hidden lg:hidden md:block sm:hidden'>
+        <div className="grid grid-cols-4 md:grid-cols-7 pt-1 ">
+        <div className='flex flex-row '>
+        <div className='basis-1/12 pt-2 hidden xl:hidden lg:hidden md:block sm:hidden md:gap-10 sm:gap-4'>
       <button className="" onClick={handlePrevBtn} disabled={currentIndex === 0}>
        <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
           <path d="M65 15 L20 50 L65 85" stroke="black" strokeWidth="16" fill="none"/>
@@ -138,14 +138,14 @@ function NavComponent (){
         </div>
         <div className='flex basis-10/12'>
           {items.slice(currentIndex, currentIndex + itemsPerPageMd).map((item, index) => (
-            <div className="slider-item px-7  " key={index}>
+            <div className="slider-item xl:px-6 lg:px-5 md:px-3" key={index}>
               <div className='hidden xl:hidden lg:hidden md:block sm:hidden md:col-span-1' > <img src={item.img} alt={`Item ${index + 1}`}  className='h-7 w-7 '/>
               <span>{item.text}</span></div>
               
             </div>
           ))}
         </div>
-        <div className=' basis-1/6 hidden xl:hidden lg:hidden md:block sm:hidden'>
+        <div className=' basis-1/12 hidden xl:hidden lg:hidden md:block sm:hidden'>
             <div className='flex'>
           <div className="flex  pr-6">
       <button  onClick={handleNextBtn} disabled={currentIndex >= items.length - itemsPerPage}>
@@ -163,9 +163,9 @@ function NavComponent (){
      </div>
      </div>
         </div>
-        <div className=" px-6 grid grid-cols-4 sm:grid-cols-4 custom-xs:grid-cols-4 absolute">
+        <div className=" px-6 grid grid-cols-12 sm:grid-cols-4 absolute">
         <div className='flex flex-row '>
-        <div className='  basis-10/12 pt-2 hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:block'>
+        <div className='basis-10/12 pt-2 hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:hidden'>
       <button className="" onClick={handlePrevBtn} disabled={currentIndex === 0}>
        <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
           <path d="M65 15 L20 50 L65 85" stroke="black" strokeWidth="16" fill="none"/>
@@ -178,7 +178,7 @@ function NavComponent (){
               <span>{item.text}</span></div>
             </div>
           ))}
-          <div className='hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:block'>
+          <div className='hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:hidden'>
          <div className="flex pr-3 basis-1/12 flex-row-reverse pt-2">
       <button  onClick={handleNextBtn} disabled={currentIndex >= items.length - itemsPerPage}>
         <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -190,7 +190,7 @@ function NavComponent (){
       </div>
         </div>
         
-        </div>
+        {/* </div> */}
        
         
       </div>
