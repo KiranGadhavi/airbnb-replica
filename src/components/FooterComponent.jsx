@@ -1,5 +1,4 @@
 import { useState } from "react"
-// import FooterTabContComponents from './FooterTabContComponents.jsx';
 import Tab1Footer from './TabFooter/Tab1Footer.jsx';
 import Tab2Footer from './TabFooter/Tab2Footer.jsx';
 import Tab3Footer from './TabFooter/Tab3Footer.jsx';
@@ -141,7 +140,7 @@ function FooterComponent(){
         </section>
         <div className="pt-3 px-16"><hr/></div>
 
-                 {/* The footerRow3 has been divided into three articles */}
+            {/* The footerRow3 has been divided into three articles */}
         <section className="grid xl:grid-cols-6 md:grid-cols-1 p-6 xl:px-0">
        {/* footerRow3 artice-1 */}
         <article className="xl:order-1 md:order-2 custom-xs:order-2 xl:px-14  md:mx-auto xl:col-span-1  grid xl:auto-cols-max lg:auto-cols-max ">

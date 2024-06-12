@@ -86,115 +86,99 @@ function NavComponent (){
   };
 
   return (
+    <>
     <div className='fixed top-48 xl:top-48 md:top-52 sm:top-24 custom-xs:top-24 left-0 right-0 z-50 bg-white  overflow-x-auto'>
     <div className="xl:px-20 lg:px-18 md:px-8 slider-container h-18 sm:h-24 custom-xs:h-20 md:pt-5 ">
-        <div className="grid grid-cols-12 xl:grid-cols-12 lg:grid-cols-12 xl:gap-4 lg:px-5   ">
-        <div className='text-sm xl:col-span-11 lg:col-span-11 xl:gap-8 lg:gap-3  flex'>
+        
+         {/* xl and lg screen */}
+        <div className="grid grid-cols-12 xl:grid-cols-12 lg:grid-cols-12 xl:gap-1 lg:px-5   ">
         <div className=' pt-2 hidden xl:block lg:block md:hidden sm:hidden'>
-      {currentIndex > 1 && <button className="drop-shadow-2xl" onClick={handlePrevBtn} disabled={currentIndex === 0}>
-       <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <path d="M65 15 L20 50 L65 85" stroke="black" strokeWidth="16" fill="none"/>
-       </svg>
-      </button>}
-        </div>
-          {items.slice(currentIndex, currentIndex + itemsPerPage).map((item, index) => (
-            <div className="slider-item  opacity-65 hover:opacity-100 hover:border-b-2 active:border-b-2 hover:pb-2" key={index}>
-              <div className='hidden xl:block lg:block md:hidden sm:hidden'> 
-              <span className="flex items-center justify-center  ">
-                <img src={item.img} alt={`Item ${index + 1}`}  className='h-7 w-7'/></span>
-              <span >{item.text}</span></div>
-            </div>
-          ))}
-          <span className="hidden xl:block lg:block md:hidden sm:hidden">
-      {currentIndex < items.length-itemsPerPage && <button  onClick={handleNextBtn} >
+        <div className='flex flex-row text-sm xl:gap-8'>
+        {currentIndex > 1 && <button className="drop-shadow-2xl pb-4" onClick={handlePrevBtn} disabled={currentIndex === 0}>
         <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <path  d="M20 15 L65 50 L20 85" stroke="black" strokeWidth="16" fill="none"/>
+            <path d="M65 15 L20 50 L65 85" stroke="black" strokeWidth="16" fill="none"/>
         </svg>
-      </button>}
-        </span>
-          </div>
-          <div className='xl:col-span-1 lg:col-span-1 hidden xl:block lg:block md:hidden sm:hidden'>
-            <div className='flex'>
-       <span className=" flex border border-slate-400 p-3 rounded-xl">
-        <span className='pt-1 pl-1'>
+        </button>}
+        <div className='flex  md:gap-12'>
+        {items.slice(currentIndex, currentIndex + itemsPerPage).map((item, index) => (
+            <div className="opacity-65 hover:opacity-100 hover:border-b-2 active:border-b-2 hover:pb-2" key={index}>
+              <span className="flex items-center justify-center">
+                <img src={item.img} alt={`Item ${index + 1}`}  className='h-7 w-7'/>
+              </span>
+              <span >{item.text}</span>
+            </div>
+        ))}
+        </div>
+        {currentIndex < items.length-itemsPerPage && <button  onClick={handleNextBtn} className="drop-shadow-2xl pb-4">
+          <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path  d="M20 15 L65 50 L20 85" stroke="black" strokeWidth="16" fill="none"/>
+          </svg>
+        </button>}
+        <div className='flex-row'>
+       <span className=" flex border border-slate-400 p-3 rounded-xl xl:col-span-1 lg:col-span-1">
          <svg xmlns="http://www.w3.org/2000/svg"  className="h-4 w-4  " fill="none" viewBox="0 0 32 32" stroke="currentColor" >
             <path  strokeWidth="3" d="M7 16H3m26 0H15M29 6h-4m-8 0H3m26 20h-4M7 16a4 4 0 1 0 8 0 4 4 0 0 0-8 0zM17 6a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 20a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 0H3"></path></svg>
-            </span>
-            <span className="place-self-center xl:px-1.5">Filters</span>
+            <span className="place-self-center xl:px-1.5 ">Filters</span>
         </span>
         </div>
      </div>
+     </div>
         </div>
-
-        {/* md */}
-        <div className="grid grid-cols-4 md:grid-cols-7 pt-1 ">
-        <div className='flex flex-row '>
-        <div className='basis-1/12 pt-2 hidden xl:hidden lg:hidden md:block sm:hidden md:gap-10 sm:gap-4'>
-      <button className="" onClick={handlePrevBtn} disabled={currentIndex === 0}>
-       <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <path d="M65 15 L20 50 L65 85" stroke="black" strokeWidth="16" fill="none"/>
-       </svg>
-      </button>
-        </div>
-        <div className='flex basis-10/12'>
+        {/* md screen*/}
+        <div className="text-sm grid grid-cols-12 md:grid-cols-12 pt-1 ">
+        <div className='hidden xl:hidden lg:hidden md:block sm:hidden'>
+        <div className='flex md:gap-6'>
+            <button onClick={handlePrevBtn} disabled={currentIndex === 0}>
+            <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M65 15 L20 50 L65 85" stroke="black" strokeWidth="16" fill="none"/>
+            </svg>
+            </button>
+        <div className='flex md:gap-16'>
           {items.slice(currentIndex, currentIndex + itemsPerPageMd).map((item, index) => (
-            <div className="slider-item xl:px-6 lg:px-5 md:px-3" key={index}>
-              <div className='hidden xl:hidden lg:hidden md:block sm:hidden md:col-span-1' > <img src={item.img} alt={`Item ${index + 1}`}  className='h-7 w-7 '/>
-              <span>{item.text}</span></div>
-              
+            <div className="opacity-65 hover:opacity-100 hover:border-b-2 active:border-b-2 hover:pb-2" key={index}>
+              <div className='flex items-center justify-center' > 
+                <img src={item.img} alt={`Item ${index + 1}`}  className='h-7 w-7 '/>
+              </div>
+              <span >{item.text}</span>
             </div>
           ))}
         </div>
-        <div className=' basis-1/12 hidden xl:hidden lg:hidden md:block sm:hidden'>
-            <div className='flex'>
-          <div className="flex  pr-6">
-      <button  onClick={handleNextBtn} disabled={currentIndex >= items.length - itemsPerPage}>
-        <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <path  d="M20 15 L65 50 L20 85" stroke="black" strokeWidth="16" fill="none"/>
-        </svg>
-      </button>
-        </div>
-       <div className="flex border border-slate-400 py-3 px-3 rounded-xl ">
-         <svg xmlns="http://www.w3.org/2000/svg"  className="h-4 w-4 x " fill="none" viewBox="0 0 32 32" stroke="currentColor" >
+            <button  onClick={handleNextBtn} disabled={currentIndex >= items.length - itemsPerPage}>
+              <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path  d="M20 15 L65 50 L20 85" stroke="black" strokeWidth="16" fill="none"/>
+              </svg>
+            </button>
+       <div className="flex-row  ">
+        <span className='flex border border-slate-400 py-3 px-3 rounded-xl'>
+          <svg xmlns="http://www.w3.org/2000/svg"  className="h-4 w-4 x " fill="none" viewBox="0 0 32 32" stroke="currentColor" >
             <path  strokeWidth="3" d="M7 16H3m26 0H15M29 6h-4m-8 0H3m26 20h-4M7 16a4 4 0 1 0 8 0 4 4 0 0 0-8 0zM17 6a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 20a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 0H3"></path></svg>
-            <span className="pb-2.4 px-2">Filters</span>
-        </div>
+            <span className="pb-2.4 px-2">Filters</span></span> 
         </div>
      </div>
      </div>
         </div>
-        <div className=" px-6 grid grid-cols-12 sm:grid-cols-4 absolute">
-        <div className='flex flex-row '>
-        <div className='basis-10/12 pt-2 hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:hidden'>
-      <button className="" onClick={handlePrevBtn} disabled={currentIndex === 0}>
-       <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <path d="M65 15 L20 50 L65 85" stroke="black" strokeWidth="16" fill="none"/>
-       </svg>
-      </button>
-        </div>
-          {items.slice(currentIndex, currentIndex + itemsPerPageSm).map((item, index) => (
-            <div className="slider-item px-7 sm:col-span-1 custom-xs:col-span-1" key={index}>
-               <div className='hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:block'> <img src={item.img} alt={`Item ${index + 1}`}  className='h-7 w-7 '/>
-              <span>{item.text}</span></div>
+        {/* sm and xs screen */}
+        <div className="text-sm px-6 sm:grid sm:grid-cols-12 sm:gap-9 absolute">
+        <div className=' hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:block'>
+        <div className='flex flex-row gap-8'>
+          {items.map((item, index) => (
+            <div className=" sm:col-span-1 custom-xs:col-span-1 opacity-65 hover:opacity-100 hover:border-b-2 active:border-b-2 hover:pb-2" key={index}>
+               <div className='flex items-center justify-center'> 
+               <img src={item.img} alt={`Item ${index + 1}`}  className='h-7 w-7 '/>
+               </div>
+              <span>{item.text}</span>
             </div>
           ))}
-          <div className='hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:hidden'>
-         <div className="flex pr-3 basis-1/12 flex-row-reverse pt-2">
-      <button  onClick={handleNextBtn} disabled={currentIndex >= items.length - itemsPerPage}>
-        <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <path  d="M20 15 L65 50 L20 85" stroke="black" strokeWidth="16" fill="none"/>
-        </svg>
-      </button>
-        </div>
-     </div>
+          </div>
       </div>
         </div>
-        
         {/* </div> */}
-       
-        
       </div>
     </div>
+
+{/* // changes above */}
+
+</>
   );
 }
 export default NavComponent
