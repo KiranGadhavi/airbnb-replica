@@ -3,6 +3,7 @@ import HeaderComponent from './components/HeaderComponent.jsx';
 import MainComponent from './components/MainComponent';
 import NavComponent from './components/NavComponent';
 import FooterComponent from './components/FooterComponent.jsx';
+// import FooterTabContComponents from './components/FooterTabContComponents.jsx';
 
 function App() {
   
@@ -12,6 +13,7 @@ function App() {
     <HeaderComponent className="fixed"></HeaderComponent>
     <NavComponent className="relative"></NavComponent>
     <MainComponent className="relative"></MainComponent>
+    {/* <FooterTabContComponents></FooterTabContComponents> */}
     <FooterComponent className="relative"></FooterComponent>
       <div>
   <h1 className="text-3xl font-bold underline">
