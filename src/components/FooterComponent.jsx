@@ -11,45 +11,72 @@ import Tab8Footer from './TabFooter/Tab8Footer.jsx';
 function FooterComponent(){
         // State to keep track of the currently active tab
         const [activeTab, setActiveTab] = useState('Tab1');
+        const [currentIndex, setCurrentIndex] = useState(0);
+        const itemsPerPage = 6;
+        const handlePrevBtn = () => {
+            setCurrentIndex((prevIndex) => Math.max(prevIndex - itemsPerPage, 0));
+          };
+        
+          const handleNextBtn = () => {
+            setCurrentIndex((prevIndex) => Math.min(prevIndex + itemsPerPage, tabs.length - itemsPerPage));
+          };
 
         // Function to handle tab clicks
-        const handleTabClick = (tab) => {
-            setActiveTab(tab);
+        const handleTabClick = (tabId) => {
+            setActiveTab(tabId);
     }
+    const tabs = [
+        { id: 'Tab1', label: 'Popular' },
+        { id: 'Tab2', label: 'Historic' },
+        { id: 'Tab3', label: 'Coastal' },
+        { id: 'Tab4', label: 'Islands' },
+        { id: 'Tab5', label: 'Lakes' },
+        { id: 'Tab6', label: 'Unique stays' },
+        { id: 'Tab7', label: 'Categories' },
+        { id: 'Tab8', label: 'Things to do' }
+    ];
     return(
         <>
         <footer className="relative bg-customGray pt-6 md:px-2 lg:px-6 sm:px-1 ">  
   <section className=" xl:px-14 custom-xs:px-6 py-8">
             <h1 className=" font-bold text-xl">Inspiration for future getaways</h1>
-        <div className="flex pt-4 button">
-           <div className="">
-            <button onClick={() => handleTabClick('Tab1')} className={` ${activeTab === 'Tab1' ? 'active font-bold border-b-2 border-black pb-4' : ''}`}>Popular</button>
-           </div>
-           <div className="px-6">
-            <button onClick={() => handleTabClick('Tab2')} className={activeTab === 'Tab2' ? 'active font-bold border-b-2 border-black pb-4' : ''}>Historic</button>
-           </div>
-           <div className="">
-            <button onClick={() => handleTabClick('Tab3')} className={activeTab === 'Tab3' ? 'active font-bold border-b-2 border-black pb-4' : ''}>Coastal</button>
-           </div>
-           <div className="px-6">
-            <button onClick={() => handleTabClick('Tab4')} className={activeTab === 'Tab4' ? 'active font-bold border-b-2 border-black pb-4' : ''}>Islands</button>
-           </div>
-           <div className="">
-            <button onClick={() => handleTabClick('Tab5')} className={activeTab === 'Tab5' ? 'active font-bold border-b-2 border-black pb-4' : ''}>Lakes</button>
-           </div>
-           <div className="px-6">
-            <button onClick={() => handleTabClick('Tab6')} className={activeTab === 'Tab6' ? 'active font-bold border-b-2 border-black pb-4' : ''}>Unique stays</button>
-           </div>
-           <div className="">
-            <button onClick={() => handleTabClick('Tab7')} className={activeTab === 'Tab7' ? 'active font-bold border-b-2 border-black pb-4' : ''}>Categories</button>
-           </div>
-           <div className="px-6">
-            <button onClick={() => handleTabClick('Tab8')} className={activeTab === 'Tab8' ? 'active font-bold border-b-2 border-black pb-4' : ''}>Things to do</button>
-           </div>
-
+           
+        <div className="flex pt-4 button relative">
+            <div className="hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:block ">
+            {currentIndex > 0 && (    
+                <button className="mr-4" onClick={handlePrevBtn}>
+                <svg className="h-8 w-4 py-2  active:border border-slate-600" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M65 15 L20 50 L65 85" stroke="black" strokeWidth="10" fill="none"/>
+                </svg>
+                </button>
+            )}
+            </div>
+            <div className="flex gap-10 custom-xs:gap-3 relative">
+            {tabs.slice(currentIndex, currentIndex + itemsPerPage).map(tab => (
+                <div key={tab.id} >
+                    <button
+                        onClick={() => handleTabClick(tab.id)}
+                        className={`pb-4  ${activeTab === tab.id ? 'active font-bold border-b-2 border-black pb-4 ' : ''}`}
+                    >
+                        {tab.label}
+                    </button>
+                </div>
+            ))}
         </div>
+           <div className="hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:block ml-6 ">
+           {currentIndex + itemsPerPage < tabs.length &&( 
+            <button onClick={handleNextBtn}>
+                <svg className="h-8 w-8 py-2 " viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <path  d="M20 15 L65 50 L20 85" stroke="black" strokeWidth="10" fill="none"/>
+                        </svg>
+                       </button>
+                    )}
+           </div>
+        </div>
+       
         <hr/>
-                    <div className="pt-2">
+      
+            <div className="pt-2">
                    {/* Popular tab1 content*/}
                     {activeTab === 'Tab1' && 
                     <div className="pt-5">
@@ -91,9 +118,9 @@ function FooterComponent(){
                      <Tab8Footer/>
                      </div>}
             </div>
+            
         </section>
         <hr/>
-
                  {/* The footerRow2 has been divided into three articles */}
         <section className="xl:px-14  grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-1  custom-xs:px-6">
               {/* footerRow2 artice-1 */}
@@ -172,7 +199,7 @@ function FooterComponent(){
                     </div>
         </article>
         {/* footerRow3 artice-3 */}
-        <article className="xl:order-3 md:order-1 custom-xs:order-1 md:mx-auto xl:col-span-3   ">
+        <article className="xl:order-3 md:order-1 custom-xs:order-1 md:mx-auto xl:col-span-3  ">
             <div >
                 <div className="flex flex-row custom-xs:font-bold ">
                     <div className="xl:px-40 xl:mx-4"></div>
@@ -203,6 +230,34 @@ function FooterComponent(){
             </div>  
         </div>
             </article>
+           
+        <article className="fixed bottom-0 right-0 left-0 z-40 bg-white hidden custom-xs:block sm:block md:block lg:hidden xl:hidden">
+           <div className="relative grid grid-cols-12 text-xs py-3 ">
+            <div className="col-span-4 text-red-500  justify-self-end">
+                <span className=" flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="h-6 w-6 text-red-500" aria-hidden="true" role="presentation" focusable="false" stroke="red" strokeWidth="3" fill="none">
+                    <g fill="none"><circle cx="12" cy="12" r="10"></circle>
+                    <path d="m19 19 11 11" ></path></g></svg>
+                </span>
+                <span>Explore</span>
+            </div>
+            <div className="col-span-4 justify-self-center text-gray-600">
+                <span className="flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="h-6 w-6 text-red-500 justify-items-center"  aria-hidden="true" role="presentation" focusable="false" stroke="grey" strokeWidth="2" fill="none">
+            <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"></path></svg>
+            </span>
+                <span>Wishlists</span>
+            </div>
+            <div className="col-span-4 text-gray-600">
+            <span className="col-span-4 justify-self-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="h-6 w-6 text-red-500 " aria-hidden="true" role="presentation" focusable="false" stroke="grey" strokeWidth="2" fill="none">
+            <g fill="none"><circle cx="16" cy="16" r="14"></circle>
+            <path d="M14.02 19.66a6 6 0 1 1 3.96 0M17.35 19.67H18c3.69.61 6.8 2.91 8.54 6.08m-20.92-.27A12.01 12.01 0 0 1 14 19.67h.62"></path></g></svg>
+            </span>
+                <span>LogIn</span>
+            </div>
+            </div>
+        </article>
         </section>
         </footer>
         </>

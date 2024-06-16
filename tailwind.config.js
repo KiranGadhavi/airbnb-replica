@@ -37,6 +37,7 @@ export default {
       colors: {
         customGray: '#f7f7f7',
       },
+      
     },
   },
   plugins: [],

@@ -7,8 +7,7 @@ return(
     {/* <div className=''> */}
 <div className="hidden sm:hidden md:block lg:block xl:block ">
 <div className="flex pt-4 flex-wrap">
-
-        <div className="xl:px-12 lg:px-6 md:px-8 sm:px-6  text-xl xl:basis-1/4 lg:basic-1/4  md:basis-1/2 md:order-1  xl:order-1">
+        <div className="xl:px-12 lg:px-6 md:px-8 sm:px-6 text-xl xl:basis-1/4 lg:basic-1/4 md:basis-1/2 md:order-1 xl:order-1">
           <div className='hidden sm:hidden md:hidden lg:block xl:block'>
             <img className="w-40 h-12 mx-0.5" src={imgUrl} alt="logo"/>
             </div>
@@ -28,9 +27,8 @@ return(
             <button className="py-2 px-4 active:font-bold focus:font-bold hover:bg-gray-100 rounded-full ">Online Experiences</button>
             </div>
         </div>
-        
-       <div className=" flex xl:basis-1/3 lg:basic-1/3 md:basis-1/2 md:order-2  xl:order-3 md:place-content-end md:px-10">
-       <div className=" flex-col">
+       <div className="flex xl:basis-1/3 lg:basic-1/3 md:basis-1/2 md:order-2 xl:order-3 md:place-content-end md:px-10">
+       <div className="flex-col">
         <button className="py-2 xl:px-6 md:px-2 active:font-bold hover:bg-gray-100 rounded-full font-bold ">Airbnb your home</button>
             </div>
         <div className=" flex-col">
@@ -38,7 +36,6 @@ return(
              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 " viewBox="0 0 16 16">
              <path d="M8 .25a7.77 7.77 0 0 1 7.75 7.78 7.75 7.75 0 0 1-7.52 7.72h-.25A7.75 7.75 0 0 1 .25 8.24v-.25A7.75 7.75 0 0 1 8 .25zm1.95 8.5h-3.9c.15 2.9 1.17 5.34 1.88 5.5H8c.68 0 1.72-2.37 1.93-5.23zm4.26 0h-2.76c-.09 1.96-.53 3.78-1.18 5.08A6.26 6.26 0 0 0 14.17 9zm-9.67 0H1.8a6.26 6.26 0 0 0 3.94 5.08 12.59 12.59 0 0 1-1.16-4.7l-.03-.38zm1.2-6.58-.12.05a6.26 6.26 0 0 0-3.83 5.03h2.75c.09-1.83.48-3.54 1.06-4.81zm2.25-.42c-.7 0-1.78 2.51-1.94 5.5h3.9c-.15-2.9-1.18-5.34-1.89-5.5h-.07zm2.28.43.03.05a12.95 12.95 0 0 1 1.15 5.02h2.75a6.28 6.28 0 0 0-3.93-5.07z"></path></svg>
         </button>
-    
         </div>
         <div className=" flex-col xl:px-4 md:px-1 sm:px-4">
         <button className="flex items-center space-x-3 py-1 px-2 h-12 w-20 hover:shadow-md rounded-full ring-1 ring-gray-300">

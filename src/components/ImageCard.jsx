@@ -59,18 +59,14 @@ function ImageCard({ images, title, host, status }){
       // Keep bullet size at index 2 the same as the current index
       if(index < 2)
        { if (index === 0 || index === 1 ) return 7; // Smaller size for other bullets
-        
       }
       else if(index > 2){
         if(index === 0 || index === 1 || index === 3 || index === 4) return 5; // Smaller size for other bullets
-      
     }
     };
     // const goToSlide = (index) => {
     //   setCurrentIndex(index);
     // };
-   
-   
     return(
         <>
         <div className="px-4 ">
@@ -78,7 +74,6 @@ function ImageCard({ images, title, host, status }){
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             >
-
           {  <img
             //  className={`absolute top-0 left-0 w-full h-full object-cover rounded-xl transition-transform duration-500 ${
             //   direction === 'next' ? 'animate-slideInLeft' : direction === 'prev' ? 'animate-slideInRight' : ''
@@ -120,7 +115,7 @@ function ImageCard({ images, title, host, status }){
             {/* &gt; */}
             </button>
             </div>)}
-            <div className="absolute bottom-0  left-20 right-20 xl:left-32 xl:right-32 lg:left-24 lg:right-24 md:left-28 md:right-28 sm:left-28 sm:right-28 custom-xs:left-48 custom-xs:right-48 flex justify-center mb-4 ">
+            <div className="absolute bottom-0 left-20 right-20 xl:left-32 xl:right-32 lg:left-24 lg:right-24 md:left-28 md:right-28 sm:left-28 sm:right-28 custom-xs:left-48 custom-xs:right-48 flex justify-center mb-4 ">
         {images.slice(0, 5).map((_, index) => (
           <svg
             key={index}
