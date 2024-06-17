@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 
 function NavComponent() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 14;
-  const itemsPerPageMd = 7;
-  const itemsPerPageSm = 4;
+  const [startIndex, setStartIndex] = useState(0);
 
-  const items = [
+  const images = [
     { img: 'https://a0.muscache.com/im/pictures/mediaverse/category_icon/original/3e5243c8-4d15-4c6b-97e3-7ba2bb7bb880.png', text: 'Icons' },
     { img: 'https://a0.muscache.com/pictures/f0c5ca0f-5aa0-4fe5-b38d-654264bacddf.jpg', text: 'Play'},
     { img: 'https://a0.muscache.com/pictures/4221e293-4770-4ea8-a4fa-9972158d4004.jpg', text: 'Caves' },
@@ -70,125 +67,71 @@ function NavComponent() {
     { img: 'https://a0.muscache.com/pictures/c9157d0a-98fe-4516-af81-44022118fbc7.jpg', text: 'Dammusi' },
     { img: 'https://a0.muscache.com/pictures/10ce1091-c854-40f3-a2fb-defc2995bcaf.jpg', text: 'Beach' },
   ];
-  const handlePrevBtn = () => {
-    let step = 0;
-    if (window.innerWidth >= 1280) {
-      step = itemsPerPage;
-    } else if (window.innerWidth >= 768) {
-      step = itemsPerPageMd;
-    } else {
-      step = itemsPerPageSm;
-    }
-    setCurrentIndex((prevIndex) => Math.max(prevIndex - step, 0));
+  
+  const imagesToShow = 14;
+
+  const handleNext = () => {
+    setStartIndex((prevIndex) => Math.min(prevIndex + imagesToShow, images.length - imagesToShow));
   };
-  const handleNextBtn = () => {
-    let step = 0;
-    if (window.innerWidth >= 1280) {
-      step = itemsPerPage;
-    } else if (window.innerWidth >= 768) {
-      step = itemsPerPageMd;
-    } else {
-      step = itemsPerPageSm;
-    }
-    setCurrentIndex((prevIndex) => Math.min(prevIndex + step, items.length - step));
+
+  const handlePrev = () => {
+    setStartIndex((prevIndex) => Math.max(prevIndex - imagesToShow, 0));
   };
+
+  const visibleImages = images.slice(startIndex, startIndex + imagesToShow);
   return (
     <>
-      <div className='fixed top-48 xl:top-48 md:top-52 sm:top-24 custom-xs:top-24 left-0 right-0 z-50 bg-white'>
-        <div className="relative xl:px-20 lg:px-12 md:px-8 md:pt-5 h-18 sm:h-24 custom-xs:h-20">
-          {/* xl and lg screen */}
-          <div className="grid grid-cols-12 xl:grid-cols-12 lg:grid-cols-12">
-            <div className='hidden xl:block lg:block md:hidden sm:hidden'>
-              <div className='flex flex-row text-sm xl:gap-2 lg:gap-1'>
-                {currentIndex > 1 && (
-                  <button className="drop-shadow-2xl pb-4" onClick={handlePrevBtn} disabled={currentIndex === 0}>
-                    <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full active:border border-slate-600" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M65 15 L20 50 L65 85" stroke="black" strokeWidth="16" fill="none"/>
-                    </svg>
-                  </button>
-                )}
-                {/*xl:gap-9 xl:gap-7.5xl:gap-6.5 xl:gap-5 */}
-                <div className='flex xl:gap-9 lg:gap-3'>
-                  {items.slice(currentIndex, currentIndex + itemsPerPage).map((item, index) => (
-                    <div className="opacity-65 hover:opacity-100 hover:border-b-2 active:border-b-2 hover:pb-2" key={index}>
-                      <div className="flex items-center justify-center ">
-                        <img src={item.img} alt={`Item ${index + 1}`}  className='h-6 w-6'/>
-                      </div>
-                      <span className='truncate w-14'>{item.text}</span>
-                    </div>
-                  ))}
-                </div>
-                {currentIndex < items.length - itemsPerPage && (
-                  <button onClick={handleNextBtn} className="drop-shadow-2xl pb-4">
-                    <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                      <path  d="M20 15 L65 50 L20 85" stroke="black" strokeWidth="16" fill="none"/>
-                    </svg>
-                  </button>
-                )}
-                <div className='flex-row pb-3'>
-                  <span className=" flex border border-slate-400 p-3 rounded-xl xl:col-span-1 lg:col-span-1">
-                    <svg xmlns="http://www.w3.org/2000/svg"  className="h-4 w-4  " fill="none" viewBox="0 0 32 32" stroke="currentColor" >
-                      <path  strokeWidth="3" d="M7 16H3m26 0H15M29 6h-4m-8 0H3m26 20h-4M7 16a4 4 0 1 0 8 0 4 4 0 0 0-8 0zM17 6a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 20a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 0H3"></path>
-                    </svg>
-                    <span className="place-self-center xl:px-1.5 ">Filters</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* md screen*/}
-          <div className="text-sm grid grid-cols-12 md:grid-cols-12 pt-1 ">
-            <div className='hidden xl:hidden lg:hidden md:block sm:hidden'>
-              <div className='flex md:gap-2'>
-                <button onClick={handlePrevBtn} disabled={currentIndex === 0}>
-                  <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <nav className="fixed top-48 xl:top-48 md:top-52 sm:top-24 custom-xs:top-24 left-0 right-0 z-50 bg-white">
+    <div className='hidden xl:block lg:block md:block sm:hidden custom-xs:hidden'> 
+     <div className='xl:px-20 lg:px-12 md:px-6 flex items-center justify-center '>
+      {startIndex > 1 && 
+      <button
+        onClick={handlePrev}
+      >
+        <svg className=" h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                     <path d="M65 15 L20 50 L65 85" stroke="black" strokeWidth="16" fill="none"/>
                   </svg>
-                </button>
-                <div className='flex md:gap-8'>
-                  {items.slice(currentIndex, currentIndex + itemsPerPageMd).map((item, index) => (
-                    <div className="opacity-65 hover:opacity-100 hover:border-b-2 active:border-b-2 hover:pb-2" key={index}>
-                      <div className='flex items-center justify-center' > 
-                        <img src={item.img} alt={`Item ${index + 1}`}  className='h-7 w-7 '/>
-                      </div>
-                      <span className='truncate w-12' >{item.text}</span>
-                    </div>
-                  ))}
-                </div>
-                <button  onClick={handleNextBtn} disabled={currentIndex >= items.length - itemsPerPage}>
-                  <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      </button>}
+      <div className="flex overflow-hidden w-full sm:w-[720px] md:w-[960px] lg:w-[1270px]">
+        {visibleImages.map((image, index) => (
+          <div key={index} className="flex flex-col items-center opacity-65 hover:opacity-100 hover:border-b-2 active:border-b-2 py-2 ">
+            <img src={image.img} alt={image.text} className="w-7 h-7 object-cover" />
+            <div className="text-center text-sm mt-2 truncate w-24 ">{image.text}</div>
+          </div>
+        ))}
+      </div>
+      <div className='flex flex-col'>
+     {startIndex < images.length- imagesToShow &&  (<button
+        onClick={handleNext}
+      >
+         <svg className="h-8 w-8 py-2 border border-slate-400 rounded-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                     <path  d="M20 15 L65 50 L20 85" stroke="black" strokeWidth="16" fill="none"/>
                   </svg>
-                </button>
-                <div className="flex-row  ">
-                  <span className='flex border border-slate-400 py-3 px-3 rounded-xl'>
-                    <svg xmlns="http://www.w3.org/2000/svg"  className="h-4 w-4 x " fill="none" viewBox="0 0 32 32" stroke="currentColor" >
+      </button>)}
+      </div>
+      <div className="flex-row  px-1">
+                  <span className='flex border border-slate-400 py-3 px-2 rounded-xl'>
+                    <svg xmlns="http://www.w3.org/2000/svg"  className="h-6 w-4 " fill="none" viewBox="0 0 32 32" stroke="currentColor" >
                       <path  strokeWidth="3" d="M7 16H3m26 0H15M29 6h-4m-8 0H3m26 20h-4M7 16a4 4 0 1 0 8 0 4 4 0 0 0-8 0zM17 6a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 20a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 0H3"></path>
                     </svg>
-                    <span className="pb-2.4 px-2">Filters</span>
+                    <span className=" px-2">Filters</span>
                   </span> 
                 </div>
-              </div>
-            </div>
+      </div>
+      </div>
+      <div className=' hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:block'>
+      <div className="bg-white text-sm sm:grid sm:grid-cols-12 sm:gap-9 absolute ">
+              <div className='flex flex-row w-screen overflow-x-auto '>
+              {images.map((image, index) => (
+          <div key={index} className="flex flex-col items-center opacity-65 hover:opacity-100 hover:border-b-2 active:border-b-2 py-2 ">
+            <img src={image.img} alt={image.text} className="w-7 h-7 object-cover" />
+            <div className="text-center text-sm mt-2 truncate w-24 ">{image.text}</div>
           </div>
-          {/* sm and xs screen */}
-          {/* sm:h-screen custom-xs:h-screen sm:overflow-y-auto custom-xs:overflow-y-auto sm:hide-scrollbar custom-xs:hide-scrollbar */}
-          <div className="text-sm px-6 sm:grid sm:grid-cols-12 sm:gap-9 absolute  overflow-x-auto overflow-y-auto hide-x-scroll">
-            <div className=' hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:block'>
-              <div className='flex flex-row gap-8'>
-                {items.map((item, index) => (
-                  <div className=" sm:col-span-1 custom-xs:col-span-1 opacity-65 hover:opacity-100 hover:border-b-2 active:border-b-2 hover:pb-2" key={index}>
-                    <div className='flex items-center justify-center'> 
-                      <img src={item.img} alt={`Item ${index + 1}`}  className='h-7 w-7 '/>
-                    </div>
-                    <span className='truncate w-14'>{item.text}</span>
-                  </div>
-                ))}
+        ))}
               </div>
-            </div>
           </div>
-       </div>
-       </div>
+    </div>
+    </nav>
     </>
   );
 }

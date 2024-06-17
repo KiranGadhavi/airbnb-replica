@@ -12,7 +12,13 @@ function FooterComponent(){
         // State to keep track of the currently active tab
         const [activeTab, setActiveTab] = useState('Tab1');
         const [currentIndex, setCurrentIndex] = useState(0);
-        const itemsPerPage = 6;
+        let itemsPerPage = 0;
+        if (window.innerWidth >= 575) {
+            itemsPerPage = 7;
+          }else if(window.innerWidth <= 575){
+            itemsPerPage = 5;
+          }
+        
         const handlePrevBtn = () => {
             setCurrentIndex((prevIndex) => Math.max(prevIndex - itemsPerPage, 0));
           };
@@ -38,20 +44,21 @@ function FooterComponent(){
     return(
         <>
         <footer className="relative bg-customGray pt-6 md:px-2 lg:px-6 sm:px-1 ">  
-  <section className=" xl:px-14 custom-xs:px-6 py-8">
-            <h1 className=" font-bold text-xl">Inspiration for future getaways</h1>
+  <section className="xl:px-14 custom-xs:px-6 py-8">
+            <h1 className="font-bold text-xl">Inspiration for future getaways</h1>
            
-        <div className="flex pt-4 button relative">
+        <div className="flex pt-4 relative">
             <div className="hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:block ">
             {currentIndex > 0 && (    
-                <button className="mr-4" onClick={handlePrevBtn}>
+                <button className="mr-2" onClick={handlePrevBtn}>
                 <svg className="h-8 w-4 py-2  active:border border-slate-600" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                           <path d="M65 15 L20 50 L65 85" stroke="black" strokeWidth="10" fill="none"/>
                 </svg>
                 </button>
             )}
             </div>
-            <div className="flex gap-10 custom-xs:gap-3 relative">
+            <div className="hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:block">
+           <div className="flex flex-row sm:gap-6 custom-xs:gap-6 relative"> 
             {tabs.slice(currentIndex, currentIndex + itemsPerPage).map(tab => (
                 <div key={tab.id} >
                     <button
@@ -62,7 +69,22 @@ function FooterComponent(){
                     </button>
                 </div>
             ))}
+            </div>
         </div>
+        <div className="hidden xl:block lg:block md:block sm:hidden custom-block">
+        <div className="flex  relative gap-7">
+            {tabs.map(tab => (
+                        <div key={tab.id} >
+                             <button
+                        onClick={() => handleTabClick(tab.id)}
+                        className={`pb-4  ${activeTab === tab.id ? 'active font-bold border-b-2 border-black pb-4 ' : ''}`}
+                    >
+                         {tab.label}
+                    </button>
+                           
+                </div>))}
+                </div>
+                </div>
            <div className="hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:block ml-6 ">
            {currentIndex + itemsPerPage < tabs.length &&( 
             <button onClick={handleNextBtn}>
@@ -73,9 +95,7 @@ function FooterComponent(){
                     )}
            </div>
         </div>
-       
         <hr/>
-      
             <div className="pt-2">
                    {/* Popular tab1 content*/}
                     {activeTab === 'Tab1' && 
@@ -118,7 +138,6 @@ function FooterComponent(){
                      <Tab8Footer/>
                      </div>}
             </div>
-            
         </section>
         <hr/>
                  {/* The footerRow2 has been divided into three articles */}

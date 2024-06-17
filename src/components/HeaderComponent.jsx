@@ -82,32 +82,26 @@ return(
         </div>
     </div>
     </div>
-    
-
   </div>
   {/* sm & sm Header design */}
-  <div  className="flex flex-row hidden px-2 custom-xs:block sm:block md:hidden lg:hidden xl:hidden">
-  <div className="px-3 flex  ">
-           <div className="flex shadow-md border rounded-full basis-11/12">
-            <div className="flex-col">
-            <svg xmlns="http://www.w3.org/2000/svg"  className="h-9 w-9 px-1 py-1 mx-2 my-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeWidth="2" d="M21 21l-6-6M9 15a6 6 0 110-12 6 6 0 010 12z" />
-            </svg>
+  <div  className="px-6 hidden custom-xs:block sm:block md:hidden lg:hidden xl:hidden">
+  <div className="flex flex-row basis-full">
+           <div className="flex shadow-md border rounded-full sm:basis-11/12 custom-xs:basis-10/12" >
+            <div className="flex-row px-1 py-2 mx-3 my-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="h-6 w-6" aria-hidden="true" role="presentation" focusable="false" stroke="black" strokeWidth="3" fill="none">
+                    <g fill="none"><circle cx="12" cy="12" r="10"></circle>
+                    <path d="m19 19 11 11" ></path></g></svg>
             </div>
-            
-            <div className="flex-col py-1">
+            <div className="flex-row py-1 text-sm overflow-hidden">
             <label className="font-bold">Where to?</label>
                  <br/>
                  <div className="text-zinc-500"> 
                 <span>Anywhere . </span>
                 <span>Anytime . </span>
                 <span>Add guests</span></div>
-               
             </div>
             </div>
-           
-            
-           <div className="basis-10 px-3 py-1">
+           <div className=" px-2 py-1">
   <svg xmlns="http://www.w3.org/2000/svg"  className="h-12 w-12 py-3 border border-slate-400 rounded-full" fill="none" viewBox="0 0 32 32" stroke="currentColor" >
     <path  strokeWidth="3" d="M7 16H3m26 0H15M29 6h-4m-8 0H3m26 20h-4M7 16a4 4 0 1 0 8 0 4 4 0 0 0-8 0zM17 6a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 20a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 0H3"></path></svg>
     </div>
@@ -115,9 +109,6 @@ return(
             
   </div>
 <br/>
-
-
-
         <hr/>
         <br/>
         {/* </div> */}

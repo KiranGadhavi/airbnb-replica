@@ -2,13 +2,30 @@
 import ImageCard from './ImageCard';
 
 function MainComponent(){
-    const slider1Images = [
-      'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4MzUyMzk5Mjc3MDU5Nw%3D%3D/original/d62c78db-3c98-46e7-8566-d685d5c689f3.png?im_w=720&amp;im_q=highq',
+  
+    const sliderImages = [
+      'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2MjI1MjI0NDQ0MzYzMjM4Mg%3D%3D/original/ae3426d1-fba4-44d4-bed2-690426f25f7a.jpeg?im_w=720&im_q=highq',
+      'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2MjI1MjI0NDQ0MzYzMjM4Mg%3D%3D/original/bf7a757d-9352-4b37-a8c2-9656427bc7fb.jpeg?im_w=720&im_q=highq',
+      'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2MjI1MjI0NDQ0MzYzMjM4Mg%3D%3D/original/ed09d57f-3074-45ae-b711-c4c1d1b7b018.jpeg?im_w=720&im_q=highq',
+      'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2MjI1MjI0NDQ0MzYzMjM4Mg%3D%3D/original/04966b4d-fe31-4bc0-b1ca-2df033d1527a.jpeg?im_w=720&im_q=highq',
+      'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2MjI1MjI0NDQ0MzYzMjM4Mg%3D%3D/original/0850c2db-06d6-4b71-bb5a-750d79fbda8a.jpeg?im_w=720&im_q=highq',
+      'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2MjI1MjI0NDQ0MzYzMjM4Mg%3D%3D/original/c1cc7004-26e3-45b5-b0dc-afd3793057b2.jpeg?im_w=720&im_q=highq',
+      'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2MjI1MjI0NDQ0MzYzMjM4Mg%3D%3D/original/64981b3a-766f-4c94-a3a0-fc0563281522.jpeg?im_w=720&im_q=highq'
       ];
-    
+      const slider1Images = [
+        'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4MzUyMzk5Mjc3MDU5Nw%3D%3D/original/ced15ffe-0ab5-48cf-a189-dbdeaaf04387.jpeg?im_w=720&im_q=highq',
+        'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4MzUyMzk5Mjc3MDU5Nw%3D%3D/original/f52a6a13-c8d1-4966-ad19-e614fd4bae3c.jpeg?im_w=720&im_q=highq',
+        'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4MzUyMzk5Mjc3MDU5Nw%3D%3D/original/0caa1462-bd5f-4cfa-8f9d-7012f7eb7d02.jpeg?im_w=720&im_q=highq',
+        'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4MzUyMzk5Mjc3MDU5Nw%3D%3D/original/dcb25748-642f-4314-9815-acaba652ca1e.jpeg?im_w=720&im_q=highq',
+        'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4MzUyMzk5Mjc3MDU5Nw%3D%3D/original/d25d568a-7cd3-460b-accc-94c6d71ccbde.jpeg?im_w=720&im_q=highq',
+        'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4MzUyMzk5Mjc3MDU5Nw%3D%3D/original/258ad76b-f5df-4b19-a94e-eb13a4a95c38.jpeg?im_w=720&im_q=highq'  
+      ];
       const slider2Images = [
         'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4OTQ5ODA0MDcwMTE4Mw%3D%3D/original/4f7a276e-9995-4b32-bda6-300de0619b25.png?im_w=720&amp;im_q=highq',
       ];
+      // const slider2Images = [
+      //   'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4OTQ5ODA0MDcwMTE4Mw%3D%3D/original/4f7a276e-9995-4b32-bda6-300de0619b25.png?im_w=720&amp;im_q=highq',
+      // ];
       const slider3Images = [
         'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4NzY0ODgzNzUzNjQzNw%3D%3D/original/cda19e4c-ae11-47b1-831b-a29f94ab76dc.png?im_w=720&amp;im_q=highq',
       ];
@@ -148,81 +165,92 @@ function MainComponent(){
     return(
         <>
         <div className='xl:mt-72 md:mt-80 sm:mt-48 custom-xs:mt-44 xl:px-16 lg:px-8 md:px-4 sm:px-3 custom-xs:px-2 grid grid-cols-4 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 custom-xs:grid-cols-1'>
-        {/* lg:px-16 md:px-6 sm:px-6 custom-xs:px-6 */}
-        {/* <div className='px-4 w-[23rem]'> */}
-          <ImageCard
-          images={slider1Images}
-          title="Wake up in the Musée d’Orsay"
+        <ImageCard
+          images={sliderImages}
+          title="Open the Olympic Games at Musée d’Orsay"
           host="Hosted by Mathieu Lehanneur"
-          status="Sold"
+          status="Sold out"
         />
-        {/* </div> */}
+        <ImageCard
+          // images={`${slider1Images?<button className="bg-rose-50">26|12m|03s|</button>:''}`}
+          images={slider1Images}
+          title="Make core memories with Inside Out 2"
+          host="Hosted by Joy"
+          status="Available"
+        />
         <ImageCard
           images={slider2Images}
-          title="Another Experience"
-          host="Hosted by Someone Else"
-          status="Available"
+          title="Stay in Prince’s Purple Rain house"
+          host="Hosted by Wendy And Lisa"
+          status="Coming August"
         />
+      
          <ImageCard
           images={slider3Images}
-          title="Another Experience"
-          host="Hosted by Someone Else"
-          status="Available"
+          title="Go VIP with Kevin Hart"
+          host="Hosted by Kevin Hart"
+          status="Coming August"
         />
          <ImageCard
           images={slider4Images}
-          title="Another Experience"
-          host="Hosted by Someone Else"
-          status="Available"
+          title="Join a living room session with Doja"
+          host="Hosted by Doja Cat"
+          status="Coming Octobe"
         />
          <ImageCard
           images={slider5Images}
           title="Wake up in the Musée d’Orsay"
           host="Hosted by Mathieu Lehanneur"
-          status="Sold"
+          status="Sold out"
         />
          <ImageCard
           images={slider6Images}
-          title="Wake up in the Musée d’Orsay"
-          host="Hosted by Mathieu Lehanneur"
-          status="Sold"
+          title="Design your Incredibles Supersuit"
+          host="Hosted by Edna Mode"
+          status="Sold out"
         />
          <ImageCard
           images={slider7Images}
-          title="Wake up in the Musée d’Orsay"
-          host="Hosted by Mathieu Lehanneur"
-          status="Sold"
+          title="Crash at the X-Mansion"
+          host="Hosted by Jubilee"
+          status="Sold out"
         />
          <ImageCard
           images={slider8Images}
-          title="Wake up in the Musée d’Orsay"
-          host="Hosted by Mathieu Lehanneur"
-          status="Sold"
+          title="Live like Bollywood star Janhvi Kapoor"
+          host="Hosted by Janhvi Kapoor"
+          status="Sold out"
         />
          <ImageCard
           images={slider9Images}
-          title="Wake up in the Musée d’Orsay"
-          host="Hosted by Mathieu Lehanneur"
-          status="Sold"
+          title="Train at the X-Mansion"
+          host="Hosted by Jubilee"
+          status="Booking closed"
         />
          <ImageCard
           images={slider10Images}
-          title="Wake up in the Musée d’Orsay"
-          host="Hosted by Mathieu Lehanneur"
-          status="Sold"
+          title="Go on tour with Feid"
+          host="Hosted by Feid"
+          status="Sold out"
         />
          <ImageCard
           images={slider11Images}
-          title="Wake up in the Musée d’Orsay"
-          host="Hosted by Mathieu Lehanneur"
-          status="Sold"
+          title="Game with Khaby Lame"
+          host="Hosted by Khaby Lame"
+          status="Sold out"
         />
          <ImageCard
           images={slider12Images}
-          title="Wake up in the Musée d’Orsay"
-          host="Hosted by Mathieu Lehanneur"
-          status="Sold"
+          title="Drift off in the Up house"
+          host="Hosted by Carl Fredricksen"
+          status="Sold out"
         />
+          {/* <ImageCard
+          images={slider2Images}
+          title="Stay in Prince’s Purple Rain house"
+          host="Hosted by Wendy and Lisa"
+          status="Available"
+        /> */}
       </div>
          {/* // past experiences */}
          <div className='text-3xl font-semibold xl:px-20 xl:px-20 lg:px-12 md:px-8 sm:px-6 custom-xs:px-6 pb-7 pt-'>
