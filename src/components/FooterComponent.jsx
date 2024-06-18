@@ -12,7 +12,7 @@ function FooterComponent(){
         // State to keep track of the currently active tab
         const [activeTab, setActiveTab] = useState('Tab1');
         const [currentIndex, setCurrentIndex] = useState(0);
-        let itemsPerPage = 0;
+        let itemsPerPage = 8;
         if (window.innerWidth >= 575) {
             itemsPerPage = 7;
           }else if(window.innerWidth <= 575){
@@ -43,10 +43,10 @@ function FooterComponent(){
     ];
     return(
         <>
-        <footer className="relative bg-customGray pt-6 md:px-2 lg:px-6 sm:px-1 ">  
-  <section className="xl:px-14 custom-xs:px-6 py-8">
-            <h1 className="font-bold text-xl">Inspiration for future getaways</h1>
-           
+    <footer className="relative bg-customGray pt-6 md:px-2 lg:px-6 sm:px-1 ">  
+       <section className="xl:px-14 custom-xs:px-6 py-8">
+            <h1 className="font-bold text-xl ">Inspiration for future getaways</h1>
+            {/* text-[#727272x] */}
         <div className="flex pt-4 relative">
             <div className="hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:block ">
             {currentIndex > 0 && (    
@@ -57,14 +57,6 @@ function FooterComponent(){
                 </button>
             )}
             </div>
-            {/* <div className="flex overflow-hidden w-full sm:w-[720px] md:w-[960px] lg:w-[1270px]">
-        {visibleImages.map((image, index) => (
-          <div key={index} className="flex flex-col items-center opacity-65 hover:opacity-100 hover:border-b-2 active:border-b-2 py-2 ">
-            <img src={image.img} alt={image.text} className="w-7 h-7 object-cover" />
-            <div className="text-center text-sm mt-2 truncate w-24 ">{image.text}</div>
-          </div>
-        ))}
-      </div> */}
             <div className="hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:block">
            <div className="flex flex-row sm:gap-6 custom-xs:gap-6 relative w-full sm:w-[720px] custom-xs:w-[350px] overflow-hidden"> 
             {tabs.slice(currentIndex, currentIndex + itemsPerPage).map(tab => (
@@ -257,7 +249,7 @@ function FooterComponent(){
         </div>
             </article>
            
-        {/* <article className="fixed bottom-0 right-0 left-0 z-40 bg-white hidden custom-xs:block sm:block md:block lg:hidden xl:hidden">
+        <article className="fixed bottom-0 right-0 left-0 z-40 bg-white hidden custom-xs:block sm:block md:block lg:hidden xl:hidden">
            <div className="relative grid grid-cols-12 text-xs py-3 ">
             <div className="col-span-4 text-red-500  justify-self-end">
                 <span className=" flex items-center justify-center">
@@ -283,10 +275,10 @@ function FooterComponent(){
                 <span>LogIn</span>
             </div>
             </div>
-        </article> */}
+        </article>
         </section>
-        </footer>
-        </>
+    </footer>
+    </>
     )
 }
 export default FooterComponent
