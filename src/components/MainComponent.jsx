@@ -171,13 +171,16 @@ function MainComponent(){
           host="Hosted by Mathieu Lehanneur"
           status="Sold out"
         />
+        
         <ImageCard
           // images={`${slider1Images?<button className="bg-rose-50">26|12m|03s|</button>:''}`}
           images={slider1Images}
           title="Make core memories with Inside Out 2"
           host="Hosted by Joy"
           status="Available"
+
         />
+
         <ImageCard
           images={slider2Images}
           title="Stay in Prince’s Purple Rain house"

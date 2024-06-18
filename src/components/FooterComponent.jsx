@@ -57,8 +57,16 @@ function FooterComponent(){
                 </button>
             )}
             </div>
+            {/* <div className="flex overflow-hidden w-full sm:w-[720px] md:w-[960px] lg:w-[1270px]">
+        {visibleImages.map((image, index) => (
+          <div key={index} className="flex flex-col items-center opacity-65 hover:opacity-100 hover:border-b-2 active:border-b-2 py-2 ">
+            <img src={image.img} alt={image.text} className="w-7 h-7 object-cover" />
+            <div className="text-center text-sm mt-2 truncate w-24 ">{image.text}</div>
+          </div>
+        ))}
+      </div> */}
             <div className="hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:block">
-           <div className="flex flex-row sm:gap-6 custom-xs:gap-6 relative"> 
+           <div className="flex flex-row sm:gap-6 custom-xs:gap-6 relative w-full sm:w-[720px] custom-xs:w-[350px] overflow-hidden"> 
             {tabs.slice(currentIndex, currentIndex + itemsPerPage).map(tab => (
                 <div key={tab.id} >
                     <button
@@ -85,7 +93,7 @@ function FooterComponent(){
                 </div>))}
                 </div>
                 </div>
-           <div className="hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:block ml-6 ">
+           <div className="hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:block ml-1 ">
            {currentIndex + itemsPerPage < tabs.length &&( 
             <button onClick={handleNextBtn}>
                 <svg className="h-8 w-8 py-2 " viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -199,10 +207,9 @@ function FooterComponent(){
             </div>
         </article>
         {/* footerRow3 artice-2 */}
-        <article className="xl:order-2 md:order-3 custom-xs:order-3 md:mx-auto xl:col-span-2  grid auto-cols-max   ">
+        <article className="custom-xs:text-sm xl:order-2 md:order-3 custom-xs:order-3 md:mx-auto xl:col-span-2  grid auto-cols-max   ">
                 <div>
                 <ol className="flex flex-row xl:space-x-1 custom-xs:space-x-2 ">
-                    <span className=" custom-xs:space-x-1  "></span>
                     <span > . </span>
                     <li>Privacy </li>
                     <span> . </span>
@@ -250,7 +257,7 @@ function FooterComponent(){
         </div>
             </article>
            
-        <article className="fixed bottom-0 right-0 left-0 z-40 bg-white hidden custom-xs:block sm:block md:block lg:hidden xl:hidden">
+        {/* <article className="fixed bottom-0 right-0 left-0 z-40 bg-white hidden custom-xs:block sm:block md:block lg:hidden xl:hidden">
            <div className="relative grid grid-cols-12 text-xs py-3 ">
             <div className="col-span-4 text-red-500  justify-self-end">
                 <span className=" flex items-center justify-center">
@@ -276,7 +283,7 @@ function FooterComponent(){
                 <span>LogIn</span>
             </div>
             </div>
-        </article>
+        </article> */}
         </section>
         </footer>
         </>

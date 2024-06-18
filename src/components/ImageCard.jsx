@@ -89,10 +89,11 @@ console.log(`images value ${images[1]}`);
                 <path d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28" fill="none" stroke="black" strokeWidth="4" ></path></svg>
             </button>
             </div>)}
-            {/* <div>
-              {`${images==images[1]?<button className="bg-rose-50">26|12m|03s|</button>:''}`}
-              {images[currentIndex]==images[1][0]&&<button className="bg-rose-50">26|12m|03s|</button>}
-            </div> */}
+            <div>
+            {/* slider1Images={ <button className="flex absolute py-4 px-12 bg-purple-100 rounded-3xl justify-center">26 | 12m | 03s |</button>} */}
+              {/* {`${images==images[1]?<button className="bg-rose-50 rounded">26|12m|03s|</button>:''}`} */}
+              {/* {images[currentIndex]===images[0]&&<button className="flex absolute py-4 px-12 bg-purple-100 rounded-3xl justify-center">26 | 12m | 03s |</button>} */}
+            </div>
             <div className="flex justify-center absolute bottom-2 right-24 left-24 ">
         {images.slice(0, 5).map((_, index) => (
           <svg
