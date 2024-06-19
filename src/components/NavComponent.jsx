@@ -89,7 +89,7 @@ function NavComponent() {
   const visibleImages = images.slice(startIndex, startIndex + imagesToShow);
   return (
     <>
-    <nav className="fixed top-48 xl:top-48 md:top-52 sm:top-24 custom-xs:top-24 left-0 right-0 z-50 bg-white">
+    <nav className="mx-auto fixed top-48 xl:top-48 md:top-52 sm:top-24 custom-xs:top-24 left-0 right-0 z-50 bg-white">
     <div className='hidden xl:block lg:block md:block sm:hidden custom-xs:hidden'> 
      <div className='xl:px-20 lg:px-12 md:px-8 flex items-center justify-center '>
       {startIndex > 1 && 
@@ -113,12 +113,12 @@ function NavComponent() {
           </button>
         ))}
       </div>
-      {/* <div>
+      <div>
           {activeTab === 'tab1' && 
        <Tab1Navbar/>}
          {activeTab === 'tab2' && 
          <Tab2Navbar/>}
-            </div> */}
+            </div>
       <div className='flex flex-col'>
      {startIndex < images.length- imagesToShow &&  (<button
         onClick={handleNext}
@@ -141,13 +141,24 @@ function NavComponent() {
       <div className=' hidden xl:hidden lg:hidden md:hidden sm:block custom-xs:block'>
       <div className=" px-6 bg-white text-sm sm:grid sm:grid-cols-12 sm:gap-9 absolute ">
               <div className='flex flex-row space-x-6  w-screen overflow-x-auto'>
-              {images.map((image, index) => (
-          <div key={index} className="flex flex-col items-center opacity-65 hover:opacity-100 hover:border-b-2 active:border-b-2 py-2 ">
+              {images.map((tab) => (
+                <button
+                onClick={() => handleTabClick(tab.id)}
+               className={`${activeTab === tab.id ? 'active opacity-100 font-bold border-b-2 border-black ' : 'opacity-65 hover:opacity-100'}`}
+                   >
+                <div key={tab.id} className="flex flex-col items-center hover:border-b-2 py-2 ">
+                  <img src={tab.img} alt={tab.text} className="w-7 h-7 object-cover" />
+                  <div className="text-center text-sm mt-2 truncate">{tab.text}</div>
+                </div>
+                </button>
+          
+        ))}
+              {/* </div>
+              <div key={index} className="flex flex-col items-center opacity-65 hover:opacity-100 hover:border-b-2 active:border-b-2 py-2 ">
             <img src={image.img} alt={image.text} className="w-7 h-7 object-cover" />
             <div className="text-center text-sm mt-2 truncate">{image.text}</div>
-          </div>
-        ))}
-              </div>
+         */}
+         </div> 
           </div>
     </div>
     </nav>
