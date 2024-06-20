@@ -9,8 +9,7 @@ A hands-on project to enhance HTML, CSS, and JavaScript skills while replicating
 ## Xl Desktop View
 ![Screenshot](src/assets/desktop.png)
 ## SM Screen View
-![Screenshot](src/assets/mobileVersion.jpg)
-
+<img src="src/assets/mobileVersion.jpg" alt="React Logo" width="250" height="500" style="margin-right: 20px;">
 
 ## <img src="src/assets/handshake.png" alt="Logo" width="25" height="25"> Acknowledgements
 
