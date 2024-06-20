@@ -8,12 +8,8 @@
 A hands-on project to enhance HTML, CSS, and JavaScript skills while replicating the layout and features of Airbnb's mobile homepage.
 ## Xl Desktop View
 ![Screenshot](src/assets/desktop.png)
-## Lg Screen View
-![Screenshot](src/assets/tablet.png)
 ## SM Screen View
 ![Screenshot](src/assets/tabletSM.png)
-## XS Mobile View
-![Screenshot](src/assets/mobile.png)
 
 
 ## <img src="src/assets/handshake.png" alt="Logo" width="25" height="25"> Acknowledgements
