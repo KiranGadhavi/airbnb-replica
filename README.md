@@ -3,11 +3,18 @@
 
 
 <p align="center">
-  <a href="https://kirangadhavi.github.io/Text-react">View Airbnb-replica</a></p>
+  <a href="https://kirangadhavi.github.io/airbnb-replica/">View Airbnb-replica</a></p>
 
 A hands-on project to enhance HTML, CSS, and JavaScript skills while replicating the layout and features of Airbnb's mobile homepage.
+## Xl Desktop View
+![Screenshot](src/assets/desktop.png)
+## Lg Screen View
+![Screenshot](src/assets/tablet.png)
+## SM Screen View
+![Screenshot](src/assets/tabletSM.png)
+## XS Mobile View
+![Screenshot](src/assets/mobile.png)
 
-<!-- ## <img src="src/assets/web-domain.png" alt="Logo" width="25" height="25"> Visit The Website -->
 
 ## <img src="src/assets/handshake.png" alt="Logo" width="25" height="25"> Acknowledgements
 
@@ -22,9 +29,11 @@ I am grateful to the SOC Bootcamp for providing this project as part of my pre-c
 
 ## <img src="src/assets/tech-icon.png" alt="Logo" width="25" height="25"> Tech Stack
 
-<img src="src/assets/react-2.svg" alt="Logo" width="80" height="40">
-<img src="src/assets/logo-javascript.svg" alt="Logo" width="80" height="40">
-<img src="src/assets/tailwind-css-2.svg" alt="Logo" width="80" height="40">
+<p align="center">
+  <img src="src/assets/react-2.svg" alt="React Logo" width="80" height="40" style="margin-right: 20px;">
+  <img src="src/assets/logo-javascript.svg" alt="JavaScript Logo" width="80" height="40" style="margin-right: 20px;">
+  <img src="src/assets/tailwind-css-2.svg" alt="Tailwind CSS Logo" width="80" height="40">
+</p>
 
 ## <img src="src/assets/goal.png" alt="Logo" width="25" height="25"> Lessons Learned
 
