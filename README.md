@@ -9,7 +9,7 @@ A hands-on project to enhance HTML, CSS, and JavaScript skills while replicating
 ## Xl Desktop View
 ![Screenshot](src/assets/desktop.png)
 ## SM Screen View
-![Screenshot](src/assets/tabletSM.png)
+![Screenshot](src/assets/mobileVersion.png)
 
 
 ## <img src="src/assets/handshake.png" alt="Logo" width="25" height="25"> Acknowledgements
